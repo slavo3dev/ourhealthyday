@@ -1,86 +1,277 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useState, useEffect, Key } from "react";
+import type { NextPage } from "next";
+import supabase from "../lib/supabase";
+
 
 const Home: NextPage = () => {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	const [showForm, setShowForm] = useState(false);
+	const [facts, setFacts] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
+	const [currentCategory, setCurrentCategory] = useState("all");
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+	useEffect(
+		function () {
+			async function getFacts() {
+				setIsLoading(true);
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
+				let query = supabase.from("facts").select("*");
 
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
+				if (currentCategory !== "all")
+					query = query.eq("category", currentCategory);
 
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+				const { data: facts, error }: any = await query
+					.order("like", { ascending: false })
+					.limit(1000);
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
+				if (!error) setFacts(facts);
+				else alert("There was a problem getting data");
+				setIsLoading(false);
+			}
+			getFacts();
+		},
+		[currentCategory]
+	);
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+	return (
+		<>
+			<Header showForm={showForm} setShowForm={setShowForm} />
+			{showForm ? (
+				<NewFactForm setFacts={setFacts} setShowForm={setShowForm} />
+			) : null}
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
-  )
+			<main className='main'>
+				<CategoryFilter setCurrentCategory={setCurrentCategory} />
+
+				{isLoading ? (
+					<Loader />
+				) : (
+					<FactList facts={facts} setFacts={setFacts} />
+				)}
+			</main>
+		</>
+	);
+};
+
+function Loader() {
+	return <p className='message'>Loading...</p>;
 }
 
-export default Home
+function Header({ showForm, setShowForm }: any) {
+	const appTitle = "Improve Wellness & Fitness";
+
+	return (
+		<header className='header'>
+			<div className='logo'>
+				<img src='/logo/logo.png' height='68' width='68' alt={appTitle} />
+				<h1>{appTitle}</h1>
+			</div>
+
+			<button
+				className='btn btn-large btn-open'
+				onClick={() => setShowForm((show: any) => !show)}
+			>
+				{showForm ? "Close" : "Share Source"}
+			</button>
+		</header>
+	);
+}
+
+const CATEGORIES: any = [
+	{ name: "Strength", color: "#3b82f6" },
+	{ name: "Endurance", color: "#16a34a" },
+	{ name: "Mental_Health", color: "#ef4444" },
+	{ name: "Heart_Health", color: "#eab308" },
+	{ name: "Mushroom_World", color: "#db2777" },
+	{ name: "Workout", color: "#14b8a6" },
+	{ name: "Science", color: "#f97316" },
+	{ name: "News", color: "#8b5cf6" },
+];
+
+function isValidHttpUrl(string: string | URL) {
+	let url;
+	try {
+		url = new URL(string);
+	} catch (_) {
+		return false;
+	}
+	return url.protocol === "http:" || url.protocol === "https:";
+}
+
+function NewFactForm({ setFacts, setShowForm }: any) {
+	const [text, setText] = useState("");
+	const [source, setSource] = useState("");
+	const [category, setCategory] = useState("");
+	const [isUploading, setIsUploading] = useState(false);
+	const textLength = text.length;
+
+	async function handleSubmit(e: { preventDefault: () => void; }) {
+		// 1. Prevent browser reload
+		e.preventDefault();
+		console.log(text, source, category);
+
+		if (text && isValidHttpUrl(source) && category && textLength <= 200) {
+			// 2. Upload fact to Supabase and receive the new fact object
+			setIsUploading(true);
+			const { data: newFact, error } = await supabase
+				.from("facts")
+				.insert([{ text, source, category }])
+				.select();
+			setIsUploading(false);
+
+			// 3. Add the new fact to the UI: add the fact to state
+			if (!error) setFacts((facts: any) => [newFact[0], ...facts]);
+
+			// 4. Reset input fields
+			setText("");
+			setSource("");
+			setCategory("");
+
+			// 5. Close the form
+			setShowForm(false);
+		}
+	}
+
+	return (
+		<form className='fact-form' onSubmit={handleSubmit}>
+			<input
+				type='text'
+				placeholder='Share a fact with the world...'
+				value={text}
+				onChange={(e) => setText(e.target.value)}
+				disabled={isUploading}
+			/>
+			<span>{200 - textLength}</span>
+			<input
+				value={source}
+				type='text'
+				placeholder='Trustworthy source...'
+				onChange={(e) => setSource(e.target.value)}
+				disabled={isUploading}
+			/>
+			<select
+				value={category}
+				onChange={(e) => setCategory(e.target.value)}
+				disabled={isUploading}
+			>
+				<option value=''>Choose category:</option>
+				{CATEGORIES.map((cat: any) => (
+					<option key={cat.name} value={cat.name}>
+						{cat.name.toUpperCase()}
+					</option>
+				))}
+			</select>
+			<button className='btn btn-large' disabled={isUploading}>
+        Post
+			</button>
+		</form>
+	);
+}
+
+function CategoryFilter({ setCurrentCategory }: any) {
+	return (
+		<aside>
+			<ul>
+				<li className='category'>
+					<button
+						className='btn btn-all-categories'
+						onClick={() => setCurrentCategory("all")}
+					>
+            All
+					</button>
+				</li>
+
+				{CATEGORIES.map((cat: any) => (
+					<li key={cat.name} className='category'>
+						<button
+							className='btn btn-category'
+							style={{ backgroundColor: cat.color }}
+							onClick={() => setCurrentCategory(cat.name)}
+						>
+							{cat.name}
+						</button>
+					</li>
+				))}
+			</ul>
+		</aside>
+	);
+}
+
+function FactList({ facts, setFacts }: any) {
+	if (facts.length === 0)
+		return (
+			<p className='message'>
+        No facts for this category yet! Create the first one ✌️
+			</p>
+		);
+
+	return (
+		<section>
+			<ul className='facts-list'>
+				{facts.map((fact: { id: Key | null | undefined; }) => (
+					<Fact key={fact.id} fact={fact} setFacts={setFacts} />
+				))}
+			</ul>
+			<p style={{ color: "#1d1e18"}}>There are {facts.length} source. Add your own source!</p>
+		</section>
+	);
+}
+
+function Fact({ fact, setFacts }: any) {
+	const [isUpdating, setIsUpdating] = useState(false);
+	const badSource =
+    fact.like + fact.exelent < fact.false;
+
+	async function handleVote(columnName: string) {
+		setIsUpdating(true);
+		const { data: updatedFact, error } = await supabase
+			.from("facts")
+			.update({ [columnName]: fact[columnName] + 1 })
+			.eq("id", fact.id)
+			.select();
+		setIsUpdating(false);
+
+		if (!error)
+			setFacts((facts: any[]) =>
+				facts.map((f: { id: any; }) => (f.id === fact.id ? updatedFact[0] : f))
+			);
+	}
+
+	return (
+		<li className='fact'>
+			<p>
+				{badSource ? <span className='badsource'>[ ⛔️ BAD SOURCE ]</span> : null}
+				{fact.text}
+				<a className='source' href={fact.source} target='_blank'>
+          (Source)
+				</a>
+			</p>
+			<span
+				className='tag'
+				style={{ backgroundColor: CATEGORIES.find((cat: any) => cat?.name === fact?.category).color, padding: "0.4rem"
+				}}
+			>
+				{fact.category}
+			</span>
+			<div className='vote-buttons'>
+				<button
+					onClick={() => handleVote("like")}
+					disabled={isUpdating}
+				>
+          👍 {fact.like}
+				</button>
+				<button
+					onClick={() => handleVote("exelent")}
+					disabled={isUpdating}
+				>
+          🤯 {fact.exelent}
+				</button>
+				<button onClick={() => handleVote("false")} disabled={isUpdating}>
+          ⛔️ {fact.false}
+				</button>
+			</div>
+		</li>
+	);
+}
+
+export default Home;
