@@ -109,7 +109,7 @@ function NewFactForm({ setFacts, setShowForm }: any) {
 		// 1. Prevent browser reload
 		e.preventDefault();
         
-		console.log( "Submit Button", isValidHttpUrl(source) );
+		
 
 		if (text && isValidHttpUrl(source) && category && textLength <= 200) {
 			try {
