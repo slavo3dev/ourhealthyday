@@ -1,38 +1,51 @@
-import axios from "axios";
+import { useState, FC } from "react";
+import axios from 'axios';
 
+interface NewFactFormProps {
+    setSources: (sources: any) => void;
+    setShowForm: (showForm: any) => void;
+  }
+
+export const NewFactForm: FC<NewFactFormProps> = ( { setSources, setShowForm } ) => {  /*Having problem with NewFactForm. Message: Type '({ setSources, setShowForm }: NewFactFormProps) => boolean' is not assignable to type 'FC<NewFactFormProps>'. Type 'boolean' is not assignable to type 'ReactElement<any, any>'*/ 
+	const [text, setText] = useState("");
+	const [source, setSource] = useState("");
+	const [category, setCategory ] = useState( "" );
+	const [ isUploading, setIsUploading ] = useState( false );
+
+    const textLength = text.length;
 
 async function handleSubmit(e: { preventDefault: () => void; }) {
-    // 1. Prevent browser reload
-    e.preventDefault();
-    
-    
-
-    if (text && isValidHttpUrl(source) && category && textLength <= 200) {
-        try {
-            setIsUploading(true);
-            await axios.post( "api/createSource", {
-                text, source, category: category.toUpperCase(), email
-            } );
-            setSources( ( sources: any ) => [ sources[ 0 ], ...sources ] );
-            
-            setTimeout(() => {
-                setText("");
-                setSource("");
-                setCategory( "" );
-                setIsUploading(false);
-                setShowForm(false);
-            }, 1500);
-            
-
-        } catch (error) {
-            throw new Error("Something Went Wrong Message was not saved!!!");
+		// 1. Prevent browser reload
+		e.preventDefault();
         
-        }
+		console.log( "Submit Button", isValidHttpUrl(source) );
 
-    }
-}
+		if (text && isValidHttpUrl(source) && category && textLength <= 200) {
+			try {
+				setIsUploading(true);
+				await axios.post( "api/createSource", {
+					text, source, category: category.toUpperCase(), email
+				} );
+				setSources( ( sources: any ) => [ sources[ 0 ], ...sources ] );
+                
+				setTimeout(() => {
+					setText("");
+					setSource("");
+					setCategory( "" );
+					setIsUploading(false);
+					setShowForm(false);
+				}, 1500);
+				
+	
+			} catch (error) {
+				throw new Error("Something Went Wrong Message was not saved!!!");
+            
+			}
 
-const handleOnClose = () => { setShowForm(false); };
+		}
+	}
+
+	const handleOnClose = () => { setShowForm(false); };
  
 
 	return (
@@ -104,3 +117,4 @@ const handleOnClose = () => { setShowForm(false); };
 		</>
 	);
 };
+
