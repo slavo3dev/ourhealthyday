@@ -1,18 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState, useEffect, Key } from "react";
-import type { NextPage } from "next";
+import { useEffect, useState, Key } from "react";
+import { UserProvider, useUser } from "@auth0/nextjs-auth0/client";
+import { NewResourceFrom } from "../src/components/modal/form-modal";
 import supabase from "../lib/supabase";
+import React from "react";
+import type { NextPage } from "next";
 
 
 const Home: NextPage = () => {
-	const [showForm, setShowForm] = useState(false);
-	const [facts, setFacts] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
-	const [currentCategory, setCurrentCategory] = useState("all");
+	const [ showForm, setShowForm ] = useState<boolean>( false );
+	const [facts, setFacts] = useState<any[]>([]);
+	const [ isLoading, setIsLoading] = useState<boolean>(false);
+	const [ currentCategory, setCurrentCategory ] = useState<string>( "all" );
 
 	useEffect(
 		function () {
-			async function getFacts() {
+			async function getSources() {
 				setIsLoading(true);
 
 				let query = supabase.from("facts").select("*");
@@ -28,18 +31,17 @@ const Home: NextPage = () => {
 				else alert("There was a problem getting data");
 				setIsLoading(false);
 			}
-			getFacts();
+			getSources();
 		},
-		[currentCategory]
+		[currentCategory, showForm ]
 	);
+ 
 
 	return (
-		<>
+		<UserProvider>
+			{ showForm && <NewResourceFrom setSources={ setFacts } setShowForm={ setShowForm } /> }
 			<Header showForm={showForm} setShowForm={setShowForm} />
-			{showForm ? (
-				<NewFactForm setFacts={setFacts} setShowForm={setShowForm} />
-			) : null}
-
+			
 			<main className='main'>
 				<CategoryFilter setCurrentCategory={setCurrentCategory} />
 
@@ -49,16 +51,18 @@ const Home: NextPage = () => {
 					<FactList facts={facts} setFacts={setFacts} />
 				)}
 			</main>
-		</>
+		</UserProvider>
 	);
 };
-
+	
 function Loader() {
 	return <p className='message'>Loading...</p>;
 }
 
 function Header({ showForm, setShowForm }: any) {
 	const appTitle = "Improve Wellness & Fitness";
+
+	const handleOnClose = () => { setShowForm( true ); };
 
 	return (
 		<header className='header'>
@@ -67,12 +71,16 @@ function Header({ showForm, setShowForm }: any) {
 				<h1>{appTitle}</h1>
 			</div>
 
-			<button
+			<div className="w-full flex items-center justify-center pb-5" >
+				<button className="hover:bg-blue-100 bg-blue-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded w-1/2" onClick={ handleOnClose }>Add Source</button>
+			</div>
+
+			{/*<button
 				className='btn btn-large btn-open'
 				onClick={() => setShowForm((show: any) => !show)}
 			>
 				{showForm ? "Close" : "Share Source"}
-			</button>
+			</button> */}
 		</header>
 	);
 }
@@ -97,24 +105,6 @@ function isValidHttpUrl(string: string | URL) {
 	}
 	return url.protocol === "http:" || url.protocol === "https:";
 }
-
-function NewFactForm({ setFacts, setShowForm }: any) {
-	const [text, setText] = useState("");
-	const [source, setSource] = useState("");
-	const [category, setCategory] = useState("");
-	const [isUploading, setIsUploading] = useState(false);
-	const [ showForm ] = useState<boolean>( false ); /*Having problem when add setShowForm*/
-	
-	const textLength = text.length;
-
-	const handleOnClose = () => { setShowForm( true ); };
-    
-	return (
-		<>
-			{ showForm && <NewFactForm setSources={ setFacts } setShowForm={ setShowForm } /> }
-		</>
-		);
-	};
 
 function CategoryFilter({ setCurrentCategory }: any) {
 	return (
