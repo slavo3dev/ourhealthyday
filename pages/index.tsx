@@ -39,7 +39,6 @@ const Home: NextPage = () => {
 
 	return (
 		<UserProvider>
-			{ showForm && <NewResourceFrom setSources={ setFacts } setShowForm={ setShowForm } /> }
 			<Header showForm={showForm} setShowForm={setShowForm} />
 			
 			<main className='main'>
@@ -61,10 +60,12 @@ function Loader() {
 
 function Header({ showForm, setShowForm }: any) {
 	const appTitle = "Improve Wellness & Fitness";
+	const [facts, setFacts] = useState<any[]>([]);
 
 	const handleOnClose = () => { setShowForm( true ); };
 
 	return (
+		
 		<header className='header'>
 			<div className='logo'>
 				<img src='/logo/logo.png' height='68' width='68' alt={appTitle} />
@@ -74,7 +75,7 @@ function Header({ showForm, setShowForm }: any) {
 			<div className="w-full flex items-center justify-center pb-5" >
 				<button className="hover:bg-blue-100 bg-blue-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded w-1/2" onClick={ handleOnClose }>Add Source</button>
 			</div>
-
+			{ showForm && <NewResourceFrom setSources={ setFacts } setShowForm={ setShowForm } /> }
 			{/*<button
 				className='btn btn-large btn-open'
 				onClick={() => setShowForm((show: any) => !show)}
