@@ -1,24 +1,18 @@
 import { useState, FC } from "react";
-import { CATEGORIES } from "../../../lib/constants";
+import { CATEGORIES } from "@lib/constants";
+import { NewResourceFromProps } from "@lib/types";
+import { isValidHttpUrl } from "@lib/util/func";
 import axios from "axios";
-import { isValidHttpUrl } from "../../../lib/constants";
-import { NewResourceFromProps } from "../../../lib/types";
-import { useUser } from "@auth0/nextjs-auth0/client";
 
 export const NewResourceFrom: FC<NewResourceFromProps> = ( { setSources, setShowForm } ) => {
 	const [text, setText] = useState("");
 	const [source, setSource] = useState("");
-	const [category, setCategory ] = useState( "" );
+	const [ category, setCategory ] = useState( "" );
+	const [ email, setEmail ] = useState("");
 	const [ isUploading, setIsUploading ] = useState( false );
-    const [showModal, setShowModal] = useState(false);
+	const [showModal, setShowModal] = useState(false);
 
 	const textLength = text.length;
-    
-	const { user } = useUser();
-    
-	const email = user?.user !== undefined ? user.user : "";
-
-	
     
 	async function handleSubmit(e: { preventDefault: () => void; }) {
 		// 1. Prevent browser reload
@@ -51,7 +45,7 @@ export const NewResourceFrom: FC<NewResourceFromProps> = ( { setSources, setShow
 		}
 	}
 
-    const handleOnClose = () => { setShowForm(false); };
+	const handleOnClose = () => { setShowForm(false); };
 
 	return (
 		<>
