@@ -39,6 +39,7 @@ const Home: NextPage = () => {
 
 	return (
 		<UserProvider>
+			
 			<Header showForm={showForm} setShowForm={setShowForm} />
 			
 			<main className='main'>
