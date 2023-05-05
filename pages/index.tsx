@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState, Key } from "react";
-import { UserProvider, useUser } from "@auth0/nextjs-auth0/client";
-import { NewResourceFrom } from "../src/components/modal/form-modal";
+import { NewResourceFrom } from "../component/Modal/NewResourceFrom";
+import { CATEGORIES } from "../lib/constants";
 import supabase from "../lib/supabase";
 import React from "react";
 import type { NextPage } from "next";
@@ -38,20 +38,19 @@ const Home: NextPage = () => {
  
 
 	return (
-		<UserProvider>
-			
-			<Header showForm={showForm} setShowForm={setShowForm} />
+		<>
+			<Header showForm={ showForm } setShowForm={ setShowForm } />
+			{ showForm && <NewResourceFrom setSources={ setFacts } setShowForm={ setShowForm } /> }
 			
 			<main className='main'>
 				<CategoryFilter setCurrentCategory={setCurrentCategory} />
-
 				{isLoading ? (
 					<Loader />
 				) : (
 					<FactList facts={facts} setFacts={setFacts} />
 				)}
 			</main>
-		</UserProvider>
+		</>
 	);
 };
 	
@@ -76,7 +75,8 @@ function Header({ showForm, setShowForm }: any) {
 			<div className="w-full flex items-center justify-center pb-5" >
 				<button className="hover:bg-blue-100 bg-blue-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded w-1/2" onClick={ handleOnClose }>Add Source</button>
 			</div>
-			{ showForm && <NewResourceFrom setSources={ setFacts } setShowForm={ setShowForm } /> }
+			{/* { showForm && <NewResourceFrom setSources={ setFacts } setShowForm={ setShowForm } /> } */}
+			
 			{/*<button
 				className='btn btn-large btn-open'
 				onClick={() => setShowForm((show: any) => !show)}
@@ -85,27 +85,6 @@ function Header({ showForm, setShowForm }: any) {
 			</button> */}
 		</header>
 	);
-}
-
-const CATEGORIES: any = [
-	{ name: "Strength", color: "#3b82f6" },
-	{ name: "Endurance", color: "#16a34a" },
-	{ name: "Mental_Health", color: "#ef4444" },
-	{ name: "Heart_Health", color: "#eab308" },
-	{ name: "Mushroom_World", color: "#db2777" },
-	{ name: "Workout", color: "#14b8a6" },
-	{ name: "Science", color: "#f97316" },
-	{ name: "News", color: "#8b5cf6" },
-];
-
-function isValidHttpUrl(string: string | URL) {
-	let url;
-	try {
-		url = new URL(string);
-	} catch (_) {
-		return false;
-	}
-	return url.protocol === "http:" || url.protocol === "https:";
 }
 
 function CategoryFilter({ setCurrentCategory }: any) {
