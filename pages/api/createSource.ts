@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
-  data: string
+    data: string
 }
 
 export default async function handler(
