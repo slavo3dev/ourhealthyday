@@ -17,41 +17,14 @@ export const NewResourceFrom: FC<NewResourceFromProps> = ( { setSources, setShow
 		// 1. Prevent browser reload
 		e.preventDefault();
         
-		// console.log( "Submit Button", isValidHttpUrl(source) );
+		console.log( "Submit Button", isValidHttpUrl(source) );
 
-		// if (text && isValidHttpUrl(source) && category && textLength <= 200) {
-		// 	try {
-		// 		setIsUploading(true);
-		// 		await axios.post( "api/createSource", {
-		// 			text, source, category: category.toUpperCase()
-		// 		} );
-		// 		setSources( ( sources: any ) => [ sources[ 0 ], ...sources ] );
-                
-		// 		setTimeout(() => {
-		// 			setText("");
-		// 			setSource("");
-		// 			setCategory( "" );
-		// 			setIsUploading(false);
-		// 			setShowForm(false);
-		// 		}, 1500 );
-                
-                
-				
-	
-		// 	} catch (error) {
-		// 		throw new Error("Something Went Wrong Message was not saved!!!");
-            
-		// 	}
-
-		// }
-
-		if (text && category && textLength <= 200) {
+		if (text && isValidHttpUrl(source) && category && textLength <= 200) {
 			try {
 				setIsUploading(true);
 				await axios.post( "api/createSource", {
 					text, source, category: category.toUpperCase()
 				} );
-                
 				setSources( ( sources: any ) => [ sources[ 0 ], ...sources ] );
                 
 				setTimeout(() => {
@@ -62,15 +35,13 @@ export const NewResourceFrom: FC<NewResourceFromProps> = ( { setSources, setShow
 					setShowForm(false);
 				}, 1500 );
                 
-                
-				
-	
 			} catch (error) {
 				throw new Error("Something Went Wrong Message was not saved!!!");
             
 			}
 
 		}
+
 	}
 
 	const handleOnClose = () => { setShowForm(false); };
