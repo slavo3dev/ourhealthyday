@@ -168,7 +168,7 @@ function Fact({ fact, setFacts }: any) {
 			</p>
 			<span
 				className='tag'
-				style={{ backgroundColor: CATEGORIES.find((cat: any) => cat?.name === fact?.category).color, padding: "0.4rem"
+				style={{ backgroundColor: CATEGORIES.find((cat: any) => cat?.name.toLowerCase() === fact?.category.toLowerCase()).color, padding: "0.4rem"
 				}}
 			>
 				{fact.category}

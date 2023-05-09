@@ -10,11 +10,10 @@ export default async function handler(
 	res: NextApiResponse<Data>
 )
 {
-	const [ text, source, category ] = req.body
-	
+	// you need to put to try and catch function 
 	await supabase
-                .from("facts")
-                .insert([{ text, source, category }])
-                .select();
+		.from("facts")
+		.insert([req.body])
+		.select();
 	res.status(200).json({ data: req.body });
 }

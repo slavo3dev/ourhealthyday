@@ -2,14 +2,12 @@ import { useState, FC } from "react";
 import { CATEGORIES } from "@lib/constants";
 import { NewResourceFromProps } from "@lib/types";
 import { isValidHttpUrl } from "@lib/util/func";
-import supabase from "@lib/supabase";
 import axios from "axios";
 
 export const NewResourceFrom: FC<NewResourceFromProps> = ( { setSources, setShowForm } ) => {
 	const [text, setText] = useState("");
 	const [source, setSource] = useState("");
 	const [ category, setCategory ] = useState( "" );
-	const [ email, setEmail ] = useState("");
 	const [ isUploading, setIsUploading ] = useState( false );
 
 	const textLength = text.length;
@@ -17,8 +15,7 @@ export const NewResourceFrom: FC<NewResourceFromProps> = ( { setSources, setShow
 	async function handleSubmit(e: { preventDefault: () => void; }) {
 		// 1. Prevent browser reload
 		e.preventDefault();
-        
-		console.log( "Submit Button", isValidHttpUrl(source) );
+    
 
 		if (text && isValidHttpUrl(source) && category && textLength <= 200) {
 			try {
@@ -27,14 +24,13 @@ export const NewResourceFrom: FC<NewResourceFromProps> = ( { setSources, setShow
 				const payload = {
 					text,
 					source,
-					category: category.toUpperCase(),
+					category,
 					like: 0,
 					excellent: 0,
 					false: 0
-				  };
-				  
-
-				  await axios.post( "api/createSource", payload );
+				};
+	
+				await axios.post( "api/createSource", payload );
 
 				setSources( ( sources: any ) => [ sources[ 0 ], ...sources ] );
                 
