@@ -2,6 +2,7 @@ import { useState, FC } from "react";
 import { CATEGORIES } from "@lib/constants";
 import { NewResourceFromProps } from "@lib/types";
 import { isValidHttpUrl } from "@lib/util/func";
+import supabase from "@lib/supabase";
 import axios from "axios";
 
 export const NewResourceFrom: FC<NewResourceFromProps> = ( { setSources, setShowForm } ) => {
@@ -22,9 +23,19 @@ export const NewResourceFrom: FC<NewResourceFromProps> = ( { setSources, setShow
 		if (text && isValidHttpUrl(source) && category && textLength <= 200) {
 			try {
 				setIsUploading(true);
-				await axios.post( "api/createSource", {
-					text, source, category: category.toUpperCase()
-				} );
+
+				const payload = {
+					text,
+					source,
+					category: category.toUpperCase(),
+					like: 0,
+					excellent: 0,
+					false: 0
+				  };
+				  
+
+				  await axios.post( "api/createSource", payload );
+
 				setSources( ( sources: any ) => [ sources[ 0 ], ...sources ] );
                 
 				setTimeout(() => {

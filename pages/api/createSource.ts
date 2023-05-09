@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import supabase from "@lib/supabase";
 
 type Data = {
     data: string
@@ -9,7 +10,11 @@ export default async function handler(
 	res: NextApiResponse<Data>
 )
 {
-	console.log( "Request Body: ", req.body );
-	console.log("Response: ", res);
+	const [ text, source, category ] = req.body
+	
+	await supabase
+                .from("facts")
+                .insert([{ text, source, category }])
+                .select();
 	res.status(200).json({ data: req.body });
 }

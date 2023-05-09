@@ -36,6 +36,7 @@ const Home: NextPage = () => {
 		[currentCategory, showForm ]
 	);
  
+	
 
 	return (
 		<>
@@ -52,8 +53,8 @@ const Home: NextPage = () => {
 			</main>
 		</>
 	);
-};
-	
+};	
+
 function Loader() {
 	return <p className='message'>Loading...</p>;
 }
