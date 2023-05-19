@@ -8,3 +8,5 @@ export const CATEGORIES: any = [
 	{ name: "Science", color: "#f97316" },
 	{ name: "News", color: "#8b5cf6" },
 ];
+
+console.log(CATEGORIES);
