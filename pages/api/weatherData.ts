@@ -1,20 +1,3 @@
-import axios from "axios";
-
-const apiKey = '6bb1483eb5c24c00b8f132720233105';
-const location = 'Belgrade, Serbia';
-
-const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
-
-axios.get(url)
-  .then((response) => {
-    const weatherData: WeatherData = response.data as WeatherData;
-    // Use the weather data here
-  })
-  .catch((error) => {
-    console.error('Error fetching weather data:', error);
-  });
-
-
 interface WeatherData {
     last_updated: string;
     last_updated_epoch: number;
@@ -40,5 +23,24 @@ interface WeatherData {
     gust_mph: number;
     gust_kph: number;
   }
+
+const apiKey = '6bb1483eb5c24c00b8f132720233105';
+const location = 'Belgrade, Serbia';
+
+const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
+
+fetch(url)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error('Error fetching weather data');
+    }
+    return response.json();
+  })
+  .then((data) => {
+    const weatherData: WeatherData = data as WeatherData;
+  })
+  .catch((error) => {
+    console.error('Error fetching weather data:', error);
+  });
 
   export default WeatherData;

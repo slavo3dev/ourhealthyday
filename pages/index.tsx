@@ -9,6 +9,7 @@ import { Title } from "../component/Title/index";
 import axios from "axios";
 import { WeatherData } from "../pages/api/weatherData";
 
+
 const Home: NextPage = () => {
   const [showForm, setShowForm] = useState<boolean>(false);
   const [facts, setFacts] = useState<any[]>([]);
@@ -42,7 +43,6 @@ const Home: NextPage = () => {
   return (
     <>
       <Header showForm={showForm} setShowForm={setShowForm} />
-      <WeatherData />
       <Title title={"Learning material"} />
       {showForm && (
         <NewResourceFrom
