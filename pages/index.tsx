@@ -6,9 +6,7 @@ import { CATEGORIES } from "../lib/constants";
 import supabase from "../lib/supabase";
 import type { NextPage } from "next";
 import { Title } from "../component/Title/index";
-import axios from "axios";
-import { WeatherData } from "../pages/api/weatherData";
-
+import { WeatherData } from "../component/WeatherData/index";
 
 const Home: NextPage = () => {
   const [showForm, setShowForm] = useState<boolean>(false);
@@ -42,6 +40,7 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <WeatherData />
       <Header showForm={showForm} setShowForm={setShowForm} />
       <Title title={"Learning material"} />
       {showForm && (
