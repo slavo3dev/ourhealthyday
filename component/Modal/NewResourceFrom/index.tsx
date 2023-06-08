@@ -10,7 +10,7 @@ export const NewResourceFrom: FC<NewResourceFromProps> = ({
 }) => {
   const [text, setText] = useState("");
   const [source, setSource] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("Strength");
   const [isUploading, setIsUploading] = useState(false);
 
   const textLength = text.length;
@@ -39,7 +39,7 @@ export const NewResourceFrom: FC<NewResourceFromProps> = ({
 
         //await axios.post( "api/createSource", payload );
 
-        fetch("api/createSource", {
+      fetch("api/createSource", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
