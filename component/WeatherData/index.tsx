@@ -1,28 +1,6 @@
 import { FC, useEffect, useState } from "react";
+import { IWeatherData } from "@lib/types";
 
-type TLocationName = "London" | "Belgrade";
-
-interface IWeatherData {
-  location: {
-    name: TLocationName;
-    region: "City of London, Greater London";
-    country: "United Kingdom";
-  };
-  current: {
-    condition: {
-      code: number;
-      icon: string;
-      text: string;
-    };
-    temp_c: number;
-    temp_f: number;
-    last_updated: string;
-    feelslike_c: number;
-    wind_kph: number;
-    humidity: number;
-    uv: number;
-  };
-}
 
 export const WeatherData: FC = () => {
   const [weatherData, setWeatherData] = useState<IWeatherData | null>(
@@ -47,7 +25,7 @@ export const WeatherData: FC = () => {
 
       const data = await response.json();
       console.log(data);
-      setWeatherData(data as WeatherData);
+      setWeatherData(data as IWeatherData);
     } catch (error) {
       console.error("Error fetching weather data:", error);
     }
