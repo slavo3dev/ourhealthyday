@@ -41,8 +41,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <WeatherData />
-      <AiChatBot />
       <Header showForm={showForm} setShowForm={setShowForm} />
       <Title title={"Learning material"} />
       {showForm && (
@@ -85,17 +83,11 @@ function Header({ showForm, setShowForm }: any) {
           width="68"
           alt={appTitle}
         />
-        <h1>{appTitle}</h1>
+        <h1 className="heading">{appTitle}</h1>
+        <WeatherData />
       </div>
 
-      <div className="w-full flex items-center justify-center pb-5">
-        <button
-          className="hover:bg-blue-100 bg-blue-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded w-1/2"
-          onClick={handleOnClose}
-        >
-          Add Source
-        </button>
-      </div>
+      
       {/* { showForm && <NewResourceFrom setSources={ setFacts } setShowForm={ setShowForm } /> } */}
 
       {/*<button
@@ -108,11 +100,14 @@ function Header({ showForm, setShowForm }: any) {
   );
 }
 
-function CategoryFilter({ setCurrentCategory }: any) {
+function CategoryFilter({ setCurrentCategory, setShowForm }: any) {
+  const handleOnClose = () => {
+    setShowForm(true);
+  };
   return (
     <aside>
-      <ul>
-        <li className="category">
+      <ul className="flex flex-row items-center space-x-7 translate-y-[-170px] translate-x-[300px]">
+        <li> {/*className="category"*/}
           <button
             className="btn btn-all-categories"
             onClick={() => setCurrentCategory("all")}
@@ -132,6 +127,16 @@ function CategoryFilter({ setCurrentCategory }: any) {
           </li>
         ))}
       </ul>
+      <div className="w-full flex items-center justify-center pb-5">
+        <button
+          className="mr-10 hover:bg-blue-100 bg-blue-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded w-1/2 translate-y-[-230px]"
+          onClick={handleOnClose}
+        >
+          Add Source
+        </button>
+        
+      </div>
+      <AiChatBot />
     </aside>
   );
 }

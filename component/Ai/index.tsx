@@ -56,11 +56,10 @@ export const AiChatBot: FC = () => {
 
 return (
     <>
-  <section className="side-bar">
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <h1 className="ai-heading jump-effect">Quick Chat With AI Health Instructor</h1>
+    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 ml-12 mt-5 rounded">
       + New Chat
     </button>
-  </section>
     </>
 );
 };
