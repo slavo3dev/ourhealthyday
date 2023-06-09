@@ -27,3 +27,7 @@ export interface IWeatherData {
       uv: number;
     };
   }
+
+  export interface IAiData {
+    
+  }

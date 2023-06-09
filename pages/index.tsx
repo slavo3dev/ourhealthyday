@@ -7,6 +7,7 @@ import supabase from "../lib/supabase";
 import type { NextPage } from "next";
 import { Title } from "../component/Title/index";
 import { WeatherData } from "../component/WeatherData/index";
+import { AiChatBot } from "component/Ai";
 
 const Home: NextPage = () => {
   const [showForm, setShowForm] = useState<boolean>(false);
@@ -41,6 +42,7 @@ const Home: NextPage = () => {
   return (
     <>
       <WeatherData />
+      <AiChatBot />
       <Header showForm={showForm} setShowForm={setShowForm} />
       <Title title={"Learning material"} />
       {showForm && (
