@@ -34,7 +34,7 @@ export const WeatherData: FC = () => {
   return (
     <>
       {weatherData && (
-  <div className="flex flex-col bg-white rounded p-2 w-64 max-w-xs">
+  <div className="flex flex-col bg-white rounded p-2 w-64 max-w-xs translate-y-[260px] translate-x-[1000px]">
     <div className="text-sm font-light text-gray-500">
       {weatherData.location.name}
     </div>

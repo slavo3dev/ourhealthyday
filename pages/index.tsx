@@ -41,6 +41,8 @@ const Home: NextPage = () => {
 
   return (
     <>
+     <WeatherData />
+      <AiChatBot />
       <Header showForm={showForm} setShowForm={setShowForm} />
       <Title title={"Learning material"} />
       {showForm && (
@@ -84,9 +86,17 @@ function Header({ showForm, setShowForm }: any) {
           alt={appTitle}
         />
         <h1 className="heading">{appTitle}</h1>
-        <WeatherData />
+        
       </div>
-
+      <div className="w-1/3 flex items-center justify-center pb-5">
+        <button
+          className="hover:bg-blue-100 bg-blue-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded w-1/2 translate-y-[120px] translate-x-[-1080px]"
+          onClick={handleOnClose}
+        >
+          Add Source
+        </button>
+        
+      </div>
       
       {/* { showForm && <NewResourceFrom setSources={ setFacts } setShowForm={ setShowForm } /> } */}
 
@@ -127,16 +137,8 @@ function CategoryFilter({ setCurrentCategory, setShowForm }: any) {
           </li>
         ))}
       </ul>
-      <div className="w-full flex items-center justify-center pb-5">
-        <button
-          className="mr-10 hover:bg-blue-100 bg-blue-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded w-1/2 translate-y-[-230px]"
-          onClick={handleOnClose}
-        >
-          Add Source
-        </button>
-        
-      </div>
-      <AiChatBot />
+      
+      
     </aside>
   );
 }
