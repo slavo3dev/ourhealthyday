@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #AAD2BA;
+  background: linear-gradient( #AAD2BA, #5fd58e);
   color: #fafaf9;
   font-family: 'Sono', sans-serif;
   padding: 48px 64px 0px;
@@ -233,7 +233,7 @@ ul {
 }
 
 .btn-category {
-  width: 100%;
+  width: 120%;
   background-image: none;
 }
 
