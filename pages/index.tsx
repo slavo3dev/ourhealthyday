@@ -42,9 +42,7 @@ const Home: NextPage = () => {
   return (
     <>
      <WeatherData />
-      <AiChatBot />
       <Header showForm={showForm} setShowForm={setShowForm} />
-      <Title title={"Learning material"} />
       {showForm && (
         <NewResourceFrom
           setSources={setFacts}
@@ -116,7 +114,7 @@ function CategoryFilter({ setCurrentCategory, setShowForm }: any) {
   };
   return (
     <aside>
-      <ul className="flex flex-row items-center space-x-7 translate-y-[-170px] translate-x-[300px]">
+      <ul className="flex flex-row items-center space-x-7 translate-y-[-100px] translate-x-[300px] ul-gap">
         <li> {/*className="category"*/}
           <button
             className="btn btn-all-categories"
