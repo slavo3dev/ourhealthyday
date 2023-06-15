@@ -40,6 +40,7 @@ body {
 }
 
 .header {
+  padding-top: 40px;
   margin-bottom: 40px;
   display: flex;
   align-items: center;
@@ -82,7 +83,7 @@ section {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: #1d1e18;
   text-transform: uppercase;
   font-family: 'Coiny', sans-serif;
@@ -92,7 +93,9 @@ h1 {
 }
 
 .heading {
+  display: inline;
   margin-left: 100px;
+  color: #604603;
 }
 
 .ai-heading {
@@ -132,18 +135,24 @@ h1 {
   gap: 8px;
 }
 
+.facts-list {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 300px 300px;
+}
+
 .fact {
   font-size: 20px;
   line-height: 1.4;
-  background-color: #1d1e18;
+  background-color: #115e59;
   margin-bottom: 16px;
   padding: 16px 24px;
   letter-spacing: 1px;
   border-radius: 1rem;
-
-  display: flex;
+  display: grid;
   align-items: center;
-  gap: 24px;
+  gap: 10px;
 }
 
 @media (max-width: 1200px) {
@@ -211,13 +220,13 @@ ul {
 
 .btn {
   border: none;
-  font-family: 'Coiny', sans-serif;
+  font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   line-height: 1;
   text-transform: uppercase;
   font-size: 1rem;
-  padding: 1rem 0 0.9rem;
-  background-image: linear-gradient(135deg, #6b8f71, #d9fff5, #b9f5d8 );
-  color: #1d1e18;
+  padding: 1rem 0.3rem 0.9rem;
+  background: #c5b340;
+  color: #604603;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.3s;

@@ -34,23 +34,21 @@ export const WeatherData: FC = () => {
   return (
     <>
       {weatherData && (
-  <div className="flex flex-col bg-white rounded p-2 w-64 max-w-xs translate-y-[-20px] translate-x-[1000px]">
-    <div className="text-sm font-light text-gray-500">
+  <div className="flex flex-col bg-teal-500 rounded-lg p-2 w-64 max-w-xs ml-5 translate-y-[250px] translate-x-[-45px]">
+    <div className="text-sm font-light text-white">
       {weatherData.location.name}
     </div>
-    <div className="text-sm text-gray-500">
+    <div className="text-sm text-white">
       {weatherData.current.last_updated}
     </div>
     <div className="flex flex-row items-center justify-center mt-4">
-      <div className="font-medium text-4xl text-black font-bold">
+      <div className="font-medium text-4xl text-white mr-20">
         {weatherData.current.temp_c}°C
       </div>
       <div className="flex flex-col items-center ml-4">
         <div className="mt-1">
-          <span className="text-xs">
-            <i className="far fa-long-arrow-up"></i>
-          </span>
-          <span className="text-xs font-light text-gray-500">
+          
+          <span className="text-xs font-light text-white">
             {weatherData.current.temp_f}°F
           </span>
         </div>
@@ -58,25 +56,10 @@ export const WeatherData: FC = () => {
           <span className="text-xs">
             <i className="far fa-long-arrow-down"></i>
           </span>
-          <span className="text-xs font-light text-gray-500">
+          <span className="text-xs font-light text-white">AT: 
             {weatherData.current.feelslike_c}°C
           </span>
         </div>
-      </div>
-    </div>
-    <div className="flex flex-row justify-between mt-4">
-      <div className="flex flex-col items-center">
-        <div className="font-medium text-xs">
-          {weatherData.current.wind_kph}
-        </div>
-      </div>
-      <div className="flex flex-col items-center">
-        <div className="font-medium text-xs">
-          {weatherData.current.humidity}
-        </div>
-      </div>
-      <div className="flex flex-col items-center">
-        <div className="font-medium text-xs">{weatherData.current.uv}</div>
       </div>
     </div>
   </div>
