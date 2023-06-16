@@ -31,3 +31,10 @@ export interface IWeatherData {
   export interface IAiData {
     
   }
+
+  export interface IBlogProps {
+    title: string;
+    content: string;
+    author: string;
+    date: string;
+  }
