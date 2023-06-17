@@ -5,9 +5,10 @@ import { NewResourceFrom } from "../component/Modal/NewResourceFrom";
 import { CATEGORIES } from "../lib/constants";
 import supabase from "../lib/supabase";
 import type { NextPage } from "next";
-import { Title } from "../component/Title/index";
 import { WeatherData } from "../component/WeatherData/index";
-import { AiChatBot } from "component/Ai";
+import { Blog } from "component/Blog";
+import { title } from "process";
+import { textContent } from "domutils";
 
 const Home: NextPage = () => {
   const [showForm, setShowForm] = useState<boolean>(false);
@@ -57,6 +58,7 @@ const Home: NextPage = () => {
         ) : (
           <FactList facts={facts} setFacts={setFacts} />
         )}
+        <Blog  />
       </main>
     </>
   );
