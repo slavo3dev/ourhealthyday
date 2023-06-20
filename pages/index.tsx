@@ -90,7 +90,7 @@ function Header({ showForm, setShowForm }: any) {
       </div>
       <div className="w-1/3 flex items-center justify-center pb-5">
         <button
-          className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded-lg w-1/2 translate-x-[-1050px]"
+          className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded-lg w-1/4 translate-y-[15px] translate-x-[-1050px]"
           onClick={handleOnClose}
         >
           Add Source
@@ -116,7 +116,7 @@ function CategoryFilter({ setCurrentCategory, setShowForm }: any) {
   };
   return (
     <aside>
-      <ul className="flex flex-row items-center space-x-8 translate-y-[-100px] translate-x-[320px] ul-gap">
+      <ul className="flex flex-row items-center space-x-8 translate-y-[-100px] translate-x-[220px] ul-gap">
         <li> {/*className="category"*/}
           <button
             className="btn btn-all-categories"
