@@ -227,16 +227,15 @@ ul {
   text-transform: uppercase;
   font-size: 1rem;
   padding: 1rem 0.3rem 0.9rem;
-  background: #c5b340;
-  color: #604603;
+  background: #14b8a6;
+  color: white;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .btn:hover {
-  transform: scale(100%) rotate(-5deg);
-  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  background: #ef4444;
 }
 
 .btn-large {
