@@ -88,6 +88,11 @@ function Header({ showForm, setShowForm }: any) {
         <h1 className="heading">{appTitle}</h1>
         
       </div>
+      <button
+          className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded-lg w-1/8 translate-y-[-170px] translate-x-[450px]"
+        >
+          Store
+        </button>
       <div className="w-1/3 flex items-center justify-center pb-5">
         <button
           className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded-lg w-1/4 translate-y-[15px] translate-x-[-1050px]"
