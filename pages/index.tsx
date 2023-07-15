@@ -4,7 +4,7 @@ import { useEffect, useState, Key } from "react";
 import type { NextPage } from "next";
 import Navigation from "component/Navbar";
 import { Welcome } from "component/Welcome";
-import { FactList } from "component/Sources";
+import { FunctionFactList } from "component/Sources";
 
 const Home: NextPage = () => {
 
@@ -14,6 +14,9 @@ const Home: NextPage = () => {
 
       <main className="main">
         <Welcome />
+        <section>
+          <FunctionFactList />
+        </section>
       </main>
     </>
   );
