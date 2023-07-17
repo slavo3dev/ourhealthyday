@@ -70,7 +70,7 @@ export default function Navigation() {
   }, []);
  
   return (
-    <Navbar className="mx-auto max-w-screen-xl px-6 py-3 bg-green-200 border-solid border-2 border-teal-800 rounded-sm">
+    <Navbar className="mx-auto max-w-screen-xl px-6 py-3 bg-green-200 border-solid border-2 border-teal-800 rounded-full">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"

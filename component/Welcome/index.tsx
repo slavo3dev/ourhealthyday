@@ -17,7 +17,7 @@ export const Welcome: FC = () => {
                   </p>
                 </div>
               </div>
-
+<div className="left-1/2 -ml-0.5 w-0.5 max-h-72 bg-teal-500"></div>
 
               <div className="w-full lg:w-1/2 px-8">
                 <ul className="space-y-12">

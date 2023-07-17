@@ -36,7 +36,7 @@ export const FunctionFactList: FC = () => {
 
     return (
           <section className="mx-auto container">
-          <div className="mx-auto max-w-screen-xl px-6 py-3 bg-green-200 border-solid border-2 border-teal-800 rounded-sm">
+          <div className="mx-auto max-w-screen-xl px-6 py-3 bg-green-200 border-solid border-2 border-teal-800 rounded-full">
             <div className="flex items-center justify-between text-blue-gray-900">
             <h1 className="mr-4 cursor-pointer py-1.5 text-teal-800 text-3xl font-semibold">
               Learning Sources
@@ -105,7 +105,7 @@ export const FunctionFactList: FC = () => {
           );
       
         return (
-          <section className="mx-auto max-w-screen-xl px-6 py-3 bg-gradient-to-r from-green-200 to-teal-200 ...">
+          <section className="mx-auto max-w-screen-xl px-6 py-3 bg-gradient-to-r from-green-200 to-teal-200 ... rounded-lg mb-8">
             <ul className="grid md:grid-cols-4 gap-4 grid-cols-2">
               {facts.map((fact: { id: Key | null | undefined }) => (
                 <Fact key={fact.id} fact={fact} setFacts={setFacts} />
