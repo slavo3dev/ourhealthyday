@@ -7,7 +7,6 @@ import { Welcome } from "component/Welcome";
 import { FunctionFactList } from "component/Sources";
 
 const Home: NextPage = () => {
-
   return (
     <>
       <Navigation />
