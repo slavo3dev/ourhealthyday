@@ -1,15 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import { useEffect, useState, Key } from "react";
 import type { NextPage } from "next";
-import Navigation from "component/Navbar";
-import { Welcome } from "component/Welcome";
-import { FunctionFactList } from "component/Sources";
+import { NavBar } from "component/Layout/Navbar";
+import { Welcome } from "component/Layout/Welcome";
+import { FunctionFactList } from "component/Layout/Sources";
 
 const Home: NextPage = () => {
   return (
     <>
-      <Navigation />
+      <NavBar />
 
       <main className="main">
         <Welcome />

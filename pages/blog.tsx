@@ -1,19 +1,23 @@
 import { FC } from "react";
-import Navigation from "component/Navbar";
-import { BlogWelcome } from "component/Blog";
+import { NavBar } from "component/Layout/Navbar";
+import { BlogWelcome } from "component/Layout/Blog";
+import { IncrementCounter } from "component/Layout/Counter";
 
 const BlogPage: FC = () => {
-    return (
-        <>
-          <Navigation />
-    
-          <main className="main">
-            <section>
-                <BlogWelcome />
-            </section>
-          </main>
-        </>
-    )
+  return (
+    <>
+      <NavBar />
+
+      <main className="flex-col">
+        <section>
+          <BlogWelcome />
+        </section>
+        <section >
+          <IncrementCounter />
+        </section>
+      </main>
+    </>
+  );
 };
 
 export default BlogPage;
