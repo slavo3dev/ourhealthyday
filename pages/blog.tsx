@@ -6,9 +6,8 @@ import { IncrementCounter } from "component/Layout/Counter";
 const BlogPage: FC = () => {
   return (
     <>
+    <main className="flex-col">
       <NavBar />
-
-      <main className="flex-col">
         <section>
           <BlogWelcome />
         </section>

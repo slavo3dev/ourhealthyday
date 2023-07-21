@@ -26,9 +26,9 @@ export const Subscribe: FC = () => {
 
   const subscribeForm = (
     <div className="flex flex-wrap max-w-lg mx-auto">
-      <div className="flex w-full md:w-2/3 px-3 mb-3 md:mb-0 md:mr-6 bg-blue-500 border border-blue-300 rounded">
+      <div className="flex w-full md:w-2/3 px-3 mb-3 md:mb-0 md:mr-6 bg-teal-500 border border-teal-300 rounded">
         <svg
-          className="h-6 w-6 my-auto text-blue-300"
+          className="h-6 w-6 my-auto text-teal-300"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -37,7 +37,7 @@ export const Subscribe: FC = () => {
           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
         </svg>
         <input
-          className="w-full pl-3 py-4 text-xs text-white placeholder-white font-semibold leading-none bg-blue-500 outline-none"
+          className="w-full pl-3 py-4 text-xs text-white placeholder-white font-semibold leading-none bg-teal-500 outline-none"
           type="text"
           placeholder="Type your e-mail"
           onChange={(e) => setEmail(e.target.value)}
@@ -45,7 +45,7 @@ export const Subscribe: FC = () => {
         />
       </div>
       <button
-        className="w-full md:w-auto py-4 px-8 text-xs text-white text-blue-800 hover:text-white font-semibold leading-none border border-blue-300 hover:border-blue-300 bg-white hover:bg-blue-500 rounded transition duration-300 ease-in-out"
+        className="w-full md:w-auto py-4 px-8 text-xs text-teal text-teal-800 hover:text-teal font-semibold leading-none border border-teal-300 hover:border-teal-300 bg-teal hover:bg-teal-500 rounded transition duration-300 ease-in-out animate-pulse"
         type="submit"
         onClick={handleSubscribe}
       >
@@ -57,11 +57,11 @@ export const Subscribe: FC = () => {
 
   return (
     <>
-      <div className="text-center max-w-xl mx-auto">
-        <h2 className="mb-4 text-3xl lg:text-3xl text-white font-bold font-heading">
-          <span>Make an account on </span>
-          <span className="text-blue-200">Our Healthy Day </span> <br />
-          <span>and explore your full potential</span>
+      <div className="text-center max-w-xl mx-auto mt-8 mb-8">
+        <h2 className="mb-4 text-3xl lg:text-3xl text-teal-600 font-bold font-heading">
+          <span>Subscribe to </span>
+          <span className="text-teal-500">Our Healthy Day </span> <br />
+          <span>Stay up to date with announcements and exclusive discounts</span>
         </h2>
         <p className="mb-8 text-white">
           All your information is completely confidential

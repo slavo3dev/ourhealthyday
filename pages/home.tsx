@@ -1,31 +1,28 @@
-import { NextPage } from "next";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from "react";
+import type { NextPage } from "next";
+import { NavBar } from "component/Layout/Navbar";
+import { Welcome } from "component/Layout/Welcome";
+import { FunctionFactList } from "component/Layout/Sources";
+import { Subscribe } from "component/Subscribe";
 
-const HomePage: NextPage = () => {
-    return (
-           <>
-             <main>
-                <div>
-                    <nav>
-                        <ul>
-                            <li>
-                               <a>Learn</a>
-                            </li>
-                            <li>
-                              <a>Blog</a>
-                            </li>
-                            <li>
-                              <a>Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <section>
-                    <h1>About us</h1>
-                </section>
-             </main>
-           </>
-    )
-}
+const Home: NextPage = () => {
+  return (
+    <>
+      <main>
+        <NavBar />
+        <section>
+          <Welcome />
+        </section>
+        <section>
+          <FunctionFactList />
+        </section>
+        <section>
+          <Subscribe />
+        </section>
+      </main>
+    </>
+  );
+};
 
-export default HomePage;
-
+export default Home;

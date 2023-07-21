@@ -1,3 +1,3 @@
-import { NewResourceFrom } from "./Modal/NewResourceFrom";
+import { NewResourceFrom } from "./Layout/NewResourceFrom";
 
 export { NewResourceFrom };

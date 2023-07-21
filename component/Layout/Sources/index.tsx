@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from "react";
 import { CATEGORIES } from "@lib/constants";
 import supabase from "@lib/supabase";
-import { NewResourceFrom } from "component/Modal/NewResourceFrom";
+import { NewResourceFrom } from "component/Layout/NewResourceFrom";
 
 export const FunctionFactList: FC = () => {
   const [showForm, setShowForm] = useState<boolean>(false);

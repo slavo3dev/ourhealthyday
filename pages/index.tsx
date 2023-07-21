@@ -4,16 +4,21 @@ import type { NextPage } from "next";
 import { NavBar } from "component/Layout/Navbar";
 import { Welcome } from "component/Layout/Welcome";
 import { FunctionFactList } from "component/Layout/Sources";
+import { Subscribe } from "component/Subscribe";
 
 const Home: NextPage = () => {
   return (
     <>
-      <NavBar />
-
-      <main className="main">
-        <Welcome />
+      <main>
+        <NavBar />
+        <section>
+          <Welcome />
+        </section>
         <section>
           <FunctionFactList />
+        </section>
+        <section>
+          <Subscribe />
         </section>
       </main>
     </>

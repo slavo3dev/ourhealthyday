@@ -6,5 +6,6 @@ import { NavBar } from "./Navbar";
 import { FunctionFactList } from "./Sources";
 import { WeatherData } from "./WeatherData";
 import { Welcome } from "./Welcome";
+import { IncrementCounter } from "./Counter";
 
-export { AiChatBot, BlogWelcome, CategoryFilter, Loader, NavBar, FunctionFactList, WeatherData, Welcome } 
+export { AiChatBot, BlogWelcome, CategoryFilter, Loader, NavBar, FunctionFactList, WeatherData, Welcome, IncrementCounter } 
