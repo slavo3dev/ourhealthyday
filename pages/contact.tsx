@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import { NavBar } from "component/Layout";
-import { ContactForm } from "component/Layout/Contact";
+import { ContactForm } from "component/Contact";
 
 const ContactPage: NextPage = () => {
   return (

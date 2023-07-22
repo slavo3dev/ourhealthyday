@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { NavBar } from "component/Layout/Navbar";
-import { BlogWelcome } from "component/Layout/Blog";
-import { IncrementCounter } from "component/Layout/Counter";
+import { NavBar } from "component/Navbar";
+import { BlogWelcome } from "component/Blog";
+import { IncrementCounter } from "component/Counter";
 
 const BlogPage: FC = () => {
   return (

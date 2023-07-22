@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { NavBar } from "component/Layout";
-import { LoginForm } from "component/Layout/Login";
+import { LoginForm } from "component/Login";
 
 const LoginPage: FC = () => {
   return (
