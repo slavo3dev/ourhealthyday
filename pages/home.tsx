@@ -5,15 +5,16 @@ import { NavBar } from "component/Navbar";
 import { Welcome } from "component/Welcome";
 import { FunctionFactList } from "component/Sources";
 import { Subscribe } from "component/Subscribe";
+import { Layout } from "component/Layout";
 
 const Home: NextPage = () => {
   return (
-    <>
-          <NavBar />
-          <Welcome />
-          <FunctionFactList />
-          <Subscribe />
-    </>
+    <Layout>
+      <NavBar />
+      <Welcome />
+      <FunctionFactList />
+      <Subscribe />
+    </Layout>
   );
 };
 

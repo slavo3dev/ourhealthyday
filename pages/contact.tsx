@@ -1,14 +1,12 @@
 import { NextPage } from "next";
-import { NavBar } from "component/Layout";
+import { NavBar } from "component";
 import { ContactForm } from "component/Contact";
 
 const ContactPage: NextPage = () => {
   return (
     <>
-      <main>
         <NavBar />
         <ContactForm />
-      </main>
     </>
   );
 };
