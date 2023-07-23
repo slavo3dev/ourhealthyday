@@ -1,15 +1,13 @@
 import { FC, useState } from "react";
-import { NavBar } from "component/Layout";
+import { NavBar } from "component";
 import { LoginForm } from "component/Login";
 
 const LoginPage: FC = () => {
   return (
-    <main>
+    <>
       <NavBar />
-      <section>
-        <LoginForm />
-      </section>
-    </main>
+      <LoginForm />
+    </>
   );
 };
 export default LoginPage;

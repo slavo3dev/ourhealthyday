@@ -1,11 +1,135 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
 
 body {
   background: white;
-  font-family: 'Sono', sans-serif;
+  font-family: "Sono", sans-serif;
   padding: 48px 64px 0px;
+}
+
+/*.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}*/
+
+#hamburger-input {
+  display: none;
+}
+
+#hamburger-menu {
+  position: absolute;
+  z-index: 11;
+  top: 80px;
+  right: 80px;
+  width: 20px;
+  height: 20px;
+  display: none;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Cabin", Sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #115e59,
+    #115e59 20%,
+    #bbf7d0 20%,
+    #bbf7d0 40%,
+    #115e59 40%,
+    #115e59 60%,
+    #bbf7d0 60%,
+    #bbf7d0 80%,
+    #115e59 80%,
+    #115e59 100%
+  );
+}
+
+#hamburger-menu #sidebar-menu {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 400px;
+  height: 100%;
+  background-color: #bbf7d0;
+  transition: 0.3s;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+
+#hamburger-menu h3 {
+  color: #115e59;
+  font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+}
+
+#hamburger-menu .nav-links {
+  color: #115e59;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+  visibility: visible;
+  left: 0;
+}
+
+/*#hamburger-input:checked ~ .overlay{
+  visibility: visible;
+ opacity: 0.4;
+}*/
+
+@media screen and (max-width: 320px) {
+  #hamburger-menu {
+    display: inline;
+    top: 110px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #hamburger-menu {
+    display: inline;
+    top: 90px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  #hamburger-menu {
+    display: inline;
+    top: 78px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #hamburger-menu {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #hamburger-menu {
+    display: none;
+  }
 }

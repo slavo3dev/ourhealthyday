@@ -6,7 +6,7 @@ export const NavBar: FC = () => {
     <nav className="mx-auto max-w-screen-xl px-6 py-3 bg-green-200 border-solid border-2 border-teal-800 rounded-full">
       <div className="flex items-center justify-between text-blue-gray-900">
         <div className="mr-4 cursor-pointer py-1.5 text-teal-800 text-3xl animate-pulse">
-          <Link href="/index">Our Healthy Day</Link>
+          <Link href="/home">Our Healthy Day</Link>
         </div>
         <div className="hidden lg:block">
         <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -45,6 +45,21 @@ export const NavBar: FC = () => {
     </ul>
         </div>
       </div>
+
+<input type="checkbox" id="hamburger-input" className="burger-shower" />
+<label id="hamburger-menu" htmlFor="hamburger-input">
+  <nav id="sidebar-menu">
+    <h3>Menu</h3>
+    <ul>
+      <li><Link className="nav-links" href="/blog">Blog</Link></li>
+      <li><Link className="nav-links" href="/store">Store</Link></li>
+      <li><Link className="nav-links" href="/contact">Contact</Link></li>
+      <li><Link className="nav-links" href="/login">Login</Link></li>
+    </ul>
+  </nav>
+</label>
+{/*<div className="overlay"></div>*/}
+
     </nav>
   );
 }
