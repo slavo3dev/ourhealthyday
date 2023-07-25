@@ -2,34 +2,34 @@ import { FC } from "react";
 import { CATEGORIES } from "@lib/constants";
 
 export const CategoryFilter: FC = ({ setCurrentCategory, setShowForm }: any) => {
-    const handleOnClose = () => {
-      setShowForm(true);
-    };
-    return (
-      <aside>
-        <ul className="flex w-full">
-          <li> {/*className="category"*/}
+  const handleOnClose = () => {
+    setShowForm(true);
+  };
+  return (
+    <aside>
+      <ul className="flex width-full ml-12 cat-buttons"> {/*mx-auto max-w-screen-xl px-6 py-3*/}
+        <li>
+          {" "}
+          {/*className="category"*/}
+          <button
+            className="hover:bg-blue-100 bg-teal-500 text-white font-bold py-3 px-4 mt-3 rounded m-3"
+            onClick={() => setCurrentCategory("all")}
+          >
+            All
+          </button>
+        </li>
+        {CATEGORIES.map((cat: any) => (
+          <li key={cat.name}>
             <button
-              className="btn btn-all-categories"
-              onClick={() => setCurrentCategory("all")}
+              className="hover:bg-blue-100 bg-teal-500 text-white font-bold py-3 px-4 mt-3 rounded m-3"
+              style={{ backgroundColor: cat.color }}
+              onClick={() => setCurrentCategory(cat.name)}
             >
-              All
+              {cat.name}
             </button>
           </li>
-          {CATEGORIES.map((cat: any) => (
-            <li key={cat.name} className="category">
-              <button
-                className="btn btn-category"
-                style={{ backgroundColor: cat.color }}
-                onClick={() => setCurrentCategory(cat.name)}
-              >
-                {cat.name}
-              </button>
-            </li>
-          ))}
-        </ul>
-        
-        
-      </aside>
-    );
-  }
+        ))}
+      </ul>
+    </aside>
+  );
+}

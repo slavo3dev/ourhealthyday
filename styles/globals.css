@@ -133,3 +133,48 @@ body {
     display: none;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .cat-buttons {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cat-buttons {
+    overflow: scroll;
+  }
+}
+@media screen and (max-width: 425px) {
+  .cat-buttons {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .cat-buttons {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cat-buttons {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  button .add-button {
+    display: inline;
+    top: 25px;
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .add-button {
+    display: inline;
+    bottom: 50px;
+    font-size: 50%;
+  }
+}
