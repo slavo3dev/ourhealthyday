@@ -11,7 +11,7 @@ export const FactList: FC = ({ facts, setFacts }: any) => {
 
   return (
     <section className="mx-auto max-w-screen-xl px-6 py-3 bg-gradient-to-r from-green-200 to-teal-200 ... rounded-lg mb-8">
-      <ul className="grid md:grid-cols-4 gap-4 grid-cols-2">
+      <ul className="grid md:grid-cols-4 gap-4 grid-cols-2 fact-list-grid">
         {facts.map((fact: { id: Key | null | undefined }) => (
           <Fact key={fact.id} fact={fact} setFacts={setFacts} />
         ))}

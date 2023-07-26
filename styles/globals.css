@@ -104,21 +104,24 @@ body {
 @media screen and (max-width: 320px) {
   #hamburger-menu {
     display: inline;
-    top: 110px;
+    top: 70px;
+    right: 30px;
   }
 }
 
 @media screen and (min-width: 375px) {
   #hamburger-menu {
     display: inline;
-    top: 90px;
+    top: 70px;
+    right: 50px;
   }
 }
 
 @media screen and (min-width: 425px) {
   #hamburger-menu {
     display: inline;
-    top: 78px;
+    top: 70px;
+    right: 60px;
   }
 }
 
@@ -163,6 +166,12 @@ body {
   }
 }
 
+@media screen and (min-width: 2056px) {
+  .cat-buttons {
+    margin-left: 10rem;
+  }
+}
+
 @media screen and (max-width: 375px) {
   button .add-button {
     display: inline;
@@ -175,6 +184,75 @@ body {
   .add-button {
     display: inline;
     bottom: 50px;
-    font-size: 50%;
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    padding: 40px 5px 0px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    padding: 40px 20px 0px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  body {
+    padding: 40px 30px 0px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .ul-margins div {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .ul-margins div {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .ul-margins div {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .fact-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
+    gap: 1.5rem;
+    align-content: center;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .fact-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
+    gap: 1.5rem;
+    align-content: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .fact-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
+    gap: 1.5rem;
+    align-content: center;
+  }
+}
+
+@media screen and (min-width: 2056px) {
+  .blog-welcome {
+    margin-left: 10rem;
   }
 }

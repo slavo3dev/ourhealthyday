@@ -51,6 +51,7 @@ export const NavBar: FC = () => {
   <nav id="sidebar-menu">
     <h3>Menu</h3>
     <ul>
+      <li><Link className="nav-links" href="/home">Home</Link></li>
       <li><Link className="nav-links" href="/blog">Blog</Link></li>
       <li><Link className="nav-links" href="/store">Store</Link></li>
       <li><Link className="nav-links" href="/contact">Contact</Link></li>

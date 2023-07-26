@@ -22,14 +22,14 @@ export const Welcome: FC = () => {
               <div className="left-1/2 -ml-0.5 w-0.5 max-h-72 bg-teal-500"></div>{" "}
               {/*This empty div represents the green vertical line on the Welcome page*/}
               <div className="w-full lg:w-1/2 px-8">
-                <ul className="space-y-12">
+                <ul className="space-y-12 ul-margins">
                   <li className="flex -mx-4 wow animate__ animate__fadeIn animated">
                     <div>
                       <span className="flex w-26 h-26 mx-auto items-center justify-center text-lg font-bold font-heading text-teal-600">
                         1. Ready
                       </span>
                     </div>
-                    <div className="px-11">
+                    <div className="px-5">
                       <h3 className="text-xl font-semibold">
                         Make the plan
                       </h3>
