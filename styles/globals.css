@@ -140,17 +140,23 @@ body {
 @media screen and (max-width: 320px) {
   .cat-buttons {
     overflow: scroll;
+    margin-left: 0rem;
+    padding: 8px 0px;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) {
   .cat-buttons {
     overflow: scroll;
+    margin-left: 0rem;
+    padding: 8px 0px;
   }
 }
 @media screen and (max-width: 425px) {
   .cat-buttons {
     overflow: scroll;
+    margin-left: 0rem;
+    padding: 10px 0px;
   }
 }
 
@@ -166,11 +172,14 @@ body {
   }
 }
 
-@media screen and (min-width: 2056px) {
+@media screen and (min-width: 1075px) {
   .cat-buttons {
-    margin-left: 10rem;
+    overflow: hidden;
+    margin-left: 8rem;
   }
 }
+
+
 
 @media screen and (max-width: 375px) {
   button .add-button {
@@ -227,7 +236,7 @@ body {
 @media screen and (max-width: 320px) {
   .fact-list-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     gap: 1.5rem;
     align-content: center;
   }
@@ -236,7 +245,7 @@ body {
 @media screen and (min-width: 375px) {
   .fact-list-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     gap: 1.5rem;
     align-content: center;
   }
@@ -245,7 +254,7 @@ body {
 @media screen and (max-width: 425px) {
   .fact-list-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     gap: 1.5rem;
     align-content: center;
   }

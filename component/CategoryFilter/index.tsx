@@ -7,7 +7,7 @@ export const CategoryFilter: FC = ({ setCurrentCategory, setShowForm }: any) => 
   };
   return (
     <aside>
-      <ul className="flex width-full ml-12 cat-buttons"> {/*mx-auto max-w-screen-xl px-6 py-3*/}
+      <ul className="flex cat-buttons"> {/*mx-auto max-w-screen-xl px-6 py-3 width-full ml-32*/}
         <li>
           {" "}
           {/*className="category"*/}
