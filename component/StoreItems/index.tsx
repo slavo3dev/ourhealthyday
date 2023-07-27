@@ -12,7 +12,7 @@ export const StoreItems: FC = () => {
               </h1>
             </div>
             <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
-              <div className="bg-teal-100 rounded-l-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl text-xl font-serif">
+              <div className="bg-teal-100 rounded-l-lg rounded-l-lg border-solid border-2 border-teal-500 ... hover:bg-teal-200 shadow-2xl text-xl font-serif">
                 <p className="px-20 py-20">
                   These vegan, vacuumed-fried shiitake mushroom caps
                   are surprisingly filling and have a satisfying
