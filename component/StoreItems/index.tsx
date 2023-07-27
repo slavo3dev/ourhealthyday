@@ -11,9 +11,9 @@ export const StoreItems: FC = () => {
                 Popadelics Crunchy Mushroom Chips ($30 for three bags)
               </h1>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 py-16 pt-20 pt-20 pb-0">
+            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
               <div className="bg-teal-100 rounded-l-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl text-xl font-serif">
-                <p className="px-20 pt-20">
+                <p className="px-20 py-20">
                   These vegan, vacuumed-fried shiitake mushroom caps
                   are surprisingly filling and have a satisfying
                   crunch. Popadelics come in three flavors—“trippin’
@@ -29,16 +29,19 @@ export const StoreItems: FC = () => {
               {/*This empty div represents the green vertical line on the Welcome page*/}
               <div>
                 <img src="https://cdn.outsideonline.com/wp-content/uploads/2022/10/popadelics-rosemary-chips_h.jpg?width=730" />
-                <div className="ml-60">
+                <div className="ml-52">
                   <h4>(Photo: Courtesy Popadelics)</h4>
                 </div>
               </div>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto ml-64">
-            <button className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 ml-30 rounded-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif w-40  mt-10">
-              Buy Now
-            </button>
-            <img src="https://t4.ftcdn.net/jpg/04/10/76/97/360_F_410769706_H2DcdErFnM4xG6y44TpKzNjwiep5PlTX.jpg" className="w-60 mt-10 ml-52 px-10"/>
+            <div className="grid grid-flow-col auto mt-10-cols-auto">
+              <button className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 ml-80 rounded-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif w-40  mt-10">
+                Buy Now
+              </button>
+              <img
+                src="https://t4.ftcdn.net/jpg/04/10/76/97/360_F_410769706_H2DcdErFnM4xG6y44TpKzNjwiep5PlTX.jpg"
+                className="w-60 mt-10 ml-52 px-10"
+              />
             </div>
           </div>
         </section>
@@ -51,9 +54,9 @@ export const StoreItems: FC = () => {
                 Confetti Snacks Mushroom Chips ($6 per pack){" "}
               </h1>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 py-16 pt-20 pt-20 pb-0">
+            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
               <div className="bg-teal-100 rounded-l-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
-                <p className="px-20 pt-20">
+                <p className="px-20 py-20">
                   Confetti Snacks bakes whole shiitake mushrooms at
                   low heat to retain their essential nutrients,
                   including calcium, magnesium, zinc, and iron. In an
@@ -68,16 +71,19 @@ export const StoreItems: FC = () => {
               {/*This empty div represents the green vertical line on the Welcome page*/}
               <div>
                 <img src="https://cdn.outsideonline.com/wp-content/uploads/2022/10/confetti-mushroom-chips_h.jpg?width=730" />
-                <div className="ml-60">
+                <div className="ml-52">
                   <h4>(Photo: Courtesy Confetti Snacks)</h4>
                 </div>
               </div>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto ml-64">
-            <button className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 ml-30 rounded-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif w-40  mt-10">
-              Buy Now
-            </button>
-            <img src="https://t4.ftcdn.net/jpg/04/10/76/97/360_F_410769706_H2DcdErFnM4xG6y44TpKzNjwiep5PlTX.jpg" className="w-60 mt-10 ml-52 px-10"/>
+            <div className="grid grid-flow-col auto mt-10-cols-auto">
+              <button className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 ml-80 rounded-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif w-40  mt-10">
+                Buy Now
+              </button>
+              <img
+                src="https://t4.ftcdn.net/jpg/04/10/76/97/360_F_410769706_H2DcdErFnM4xG6y44TpKzNjwiep5PlTX.jpg"
+                className="w-60 mt-10 ml-52 px-10"
+              />
             </div>
           </div>
         </section>
@@ -90,9 +96,9 @@ export const StoreItems: FC = () => {
                 Somos Smoky Chipotle Mushrooms ($11 for two pouches){" "}
               </h1>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 py-16 pt-20 pt-20 pb-0">
+            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
               <div className="bg-teal-100 rounded-l-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
-                <p className="px-20 pt-20">
+                <p className="px-20 py-20">
                   Elevate your camping meals by packing a couple of
                   pouches of Somos’ Smoky Chipotle Mushrooms. This
                   white button mushroom dish is simmered with roasted
@@ -106,16 +112,19 @@ export const StoreItems: FC = () => {
               {/*This empty div represents the green vertical line on the Welcome page*/}
               <div>
                 <img src="https://cdn.outsideonline.com/wp-content/uploads/2022/10/somos-smoky-chipotle_h.jpg?width=730" />
-                <div className="ml-60">
+                <div className="ml-52">
                   <h4>(Photo: Courtesy Somos)</h4>
                 </div>
               </div>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto ml-64">
-            <button className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 ml-30 rounded-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif w-40  mt-10">
-              Buy Now
-            </button>
-            <img src="https://t4.ftcdn.net/jpg/04/10/76/97/360_F_410769706_H2DcdErFnM4xG6y44TpKzNjwiep5PlTX.jpg" className="w-60 mt-10 ml-52 px-10"/>
+            <div className="grid grid-flow-col auto mt-10-cols-auto ">
+              <button className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 ml-80 rounded-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif w-40  mt-10">
+                Buy Now
+              </button>
+              <img
+                src="https://t4.ftcdn.net/jpg/04/10/76/97/360_F_410769706_H2DcdErFnM4xG6y44TpKzNjwiep5PlTX.jpg"
+                className="w-60 mt-10 ml-52 px-10"
+              />
             </div>
           </div>
         </section>
@@ -129,9 +138,9 @@ export const StoreItems: FC = () => {
                 ($25 per bag){" "}
               </h1>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 py-16 pt-20 pt-20 pb-0">
+            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
               <div className="bg-teal-100 rounded-l-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
-                <p className="px-20 pt-20">
+                <p className="px-20 py-20">
                   Co-founded by Laird Hamilton and Gabby Reece, Laird
                   Superfood recently launched a line of
                   mushroom-centric coffee, creamer, and blends. Their
@@ -149,16 +158,19 @@ export const StoreItems: FC = () => {
               {/*This empty div represents the green vertical line on the Welcome page*/}
               <div>
                 <img src="https://cdn.outsideonline.com/wp-content/uploads/2022/10/laird-hot-chocolate-mushrooms_h.jpg?width=730" />
-                <div className="ml-60">
+                <div className="ml-52">
                   <h4>(Photo: Courtesy Laird Superfood)</h4>
                 </div>
               </div>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto ml-64">
-            <button className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 ml-30 rounded-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif w-40  mt-10">
-              Buy Now
-            </button>
-            <img src="https://t4.ftcdn.net/jpg/04/10/76/97/360_F_410769706_H2DcdErFnM4xG6y44TpKzNjwiep5PlTX.jpg" className="w-60 mt-10 ml-52 px-10"/>
+            <div className="grid grid-flow-col auto mt-10-cols-auto">
+              <button className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 ml-80 rounded-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif w-40  mt-10">
+                Buy Now
+              </button>
+              <img
+                src="https://t4.ftcdn.net/jpg/04/10/76/97/360_F_410769706_H2DcdErFnM4xG6y44TpKzNjwiep5PlTX.jpg"
+                className="w-60 mt-10 ml-52 px-10"
+              />
             </div>
           </div>
         </section>
