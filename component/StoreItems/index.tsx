@@ -12,7 +12,7 @@ export const StoreItems: FC = () => {
               </h1>
             </div>
             <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
-              <div className="bg-teal-100 rounded-l-lg rounded-l-lg border-solid border-2 border-teal-500 ... hover:bg-teal-200 shadow-2xl text-xl font-serif">
+              <div className="bg-teal-100 rounded-l-lg border-solid border-2 border-teal-500 ... hover:bg-teal-200 shadow-2xl text-xl font-serif">
                 <p className="px-20 py-20">
                   These vegan, vacuumed-fried shiitake mushroom caps
                   are surprisingly filling and have a satisfying
@@ -25,8 +25,6 @@ export const StoreItems: FC = () => {
                   and wellness organizations.
                 </p>
               </div>
-              <div className="left-1/2 -ml-0.5 w-0.5 max-h-88 bg-teal-500"></div>{" "}
-              {/*This empty div represents the green vertical line on the Welcome page*/}
               <div>
                 <img src="https://cdn.outsideonline.com/wp-content/uploads/2022/10/popadelics-rosemary-chips_h.jpg?width=730" />
                 <div className="ml-52">
@@ -55,7 +53,7 @@ export const StoreItems: FC = () => {
               </h1>
             </div>
             <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
-              <div className="bg-teal-100 rounded-l-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
+              <div className="bg-teal-100 rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
                 <p className="px-20 py-20">
                   Confetti Snacks bakes whole shiitake mushrooms at
                   low heat to retain their essential nutrients,
@@ -67,8 +65,6 @@ export const StoreItems: FC = () => {
                   launch Tandoori BBQ and Sea Salt in the future.
                 </p>
               </div>
-              <div className="left-1/2 -ml-0.5 w-0.5 max-h-88 bg-teal-500"></div>{" "}
-              {/*This empty div represents the green vertical line on the Welcome page*/}
               <div>
                 <img src="https://cdn.outsideonline.com/wp-content/uploads/2022/10/confetti-mushroom-chips_h.jpg?width=730" />
                 <div className="ml-52">
@@ -97,7 +93,7 @@ export const StoreItems: FC = () => {
               </h1>
             </div>
             <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
-              <div className="bg-teal-100 rounded-l-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
+              <div className="bg-teal-100 rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
                 <p className="px-20 py-20">
                   Elevate your camping meals by packing a couple of
                   pouches of Somos’ Smoky Chipotle Mushrooms. This
@@ -108,8 +104,6 @@ export const StoreItems: FC = () => {
                   them in burritos for a hearty meal.
                 </p>
               </div>
-              <div className="left-1/2 -ml-0.5 w-0.5 max-h-88 bg-teal-500"></div>{" "}
-              {/*This empty div represents the green vertical line on the Welcome page*/}
               <div>
                 <img src="https://cdn.outsideonline.com/wp-content/uploads/2022/10/somos-smoky-chipotle_h.jpg?width=730" />
                 <div className="ml-52">
@@ -139,7 +133,7 @@ export const StoreItems: FC = () => {
               </h1>
             </div>
             <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
-              <div className="bg-teal-100 rounded-l-lg rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
+              <div className="bg-teal-100 rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
                 <p className="px-20 py-20">
                   Co-founded by Laird Hamilton and Gabby Reece, Laird
                   Superfood recently launched a line of
@@ -154,8 +148,6 @@ export const StoreItems: FC = () => {
                   soothing beverage.
                 </p>
               </div>
-              <div className="left-1/2 -ml-0.5 w-0.5 max-h-88 bg-teal-500"></div>{" "}
-              {/*This empty div represents the green vertical line on the Welcome page*/}
               <div>
                 <img src="https://cdn.outsideonline.com/wp-content/uploads/2022/10/laird-hot-chocolate-mushrooms_h.jpg?width=730" />
                 <div className="ml-52">
