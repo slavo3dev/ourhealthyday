@@ -265,3 +265,43 @@ body {
     margin-left: 10rem;
   }
 }
+
+/*@media screen and (max-width: 320px) {
+  .store-items {
+    display: flex;
+    flex-flow: column;
+  }
+  .store {
+    margin-left: 35rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .store-items {
+    display: flex;
+    flex-flow: column;
+  }
+  .store {
+    margin-left: 35rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .store-items {
+    display: flex;
+    flex-flow: column;
+  }
+  .store {
+    margin-left: 40rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .store-items {
+    display: flex;
+    flex-flow: column;
+  }
+  .store {
+    margin-right: 20rem;
+  }
+}*/

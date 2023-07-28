@@ -5,13 +5,13 @@ export const StoreItems: FC = () => {
     <>
       <div className="flex flex-col bg-white justify-center items-center h-full p-8">
         <section className="py-20 pt-20">
-          <div>
+          <div className ="store">
             <div>
               <h1 className="text-center cursor-pointer py-1.5 text-teal-800 text-4xl font-semibold">
                 Popadelics Crunchy Mushroom Chips ($30 for three bags)
               </h1>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
+            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0 store-items">
               <div className="bg-teal-100 rounded-l-lg border-solid border-2 border-teal-500 ... hover:bg-teal-200 shadow-2xl text-xl font-serif">
                 <p className="px-20 py-20">
                   These vegan, vacuumed-fried shiitake mushroom caps
@@ -46,13 +46,13 @@ export const StoreItems: FC = () => {
       </div>
       <div className="flex flex-col bg-white justify-center items-center h-full p-8">
         <section className="py-20 pt-20">
-          <div>
+          <div className ="store">
             <div>
               <h1 className="text-center cursor-pointer py-1.5 text-teal-800 text-4xl font-semibold">
                 Confetti Snacks Mushroom Chips ($6 per pack){" "}
               </h1>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
+            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0 store-items">
               <div className="bg-teal-100 rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
                 <p className="px-20 py-20">
                   Confetti Snacks bakes whole shiitake mushrooms at
@@ -86,13 +86,13 @@ export const StoreItems: FC = () => {
       </div>
       <div className="flex flex-col bg-white justify-center items-center h-full p-8">
         <section className="py-20 pt-20">
-          <div>
+          <div className ="store">
             <div>
               <h1 className="text-center cursor-pointer py-1.5 text-teal-800 text-4xl font-semibold">
                 Somos Smoky Chipotle Mushrooms ($11 for two pouches){" "}
               </h1>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
+            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0 store-items">
               <div className="bg-teal-100 rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
                 <p className="px-20 py-20">
                   Elevate your camping meals by packing a couple of
@@ -125,14 +125,14 @@ export const StoreItems: FC = () => {
       </div>
       <div className="flex flex-col bg-white justify-center items-center h-full p-8">
         <section className="py-20 pt-20">
-          <div>
+          <div className ="store">
             <div>
               <h1 className="text-center cursor-pointer py-1.5 text-teal-800 text-4xl font-semibold">
                 Laird Superfood Hot Chocolate with Functional Mushroom
                 ($25 per bag){" "}
               </h1>
             </div>
-            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0">
+            <div className="grid grid-flow-col auto mt-10-cols-auto mt-10 ml-24 py-16 pt-20 pt-20 pb-0 store-items">
               <div className="bg-teal-100 rounded-l-lg border-solid border-2 border-teal-500 ... shadow-2xl hover:bg-teal-200 text-xl font-serif">
                 <p className="px-20 py-20">
                   Co-founded by Laird Hamilton and Gabby Reece, Laird
