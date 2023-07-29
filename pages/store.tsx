@@ -4,12 +4,12 @@ import { Layout } from "component/Layout";
 import { StoreItems } from "component/StoreItems";
 
 export const StorePage: FC = () => {
-    return (
-        <Layout>
-            <NavBar />
-            <StoreItems />
-        </Layout>
-    )
-}
+  return (
+    <Layout>
+      <NavBar />
+      <StoreItems />
+    </Layout>
+  );
+};
 
 export default StorePage;

@@ -179,8 +179,6 @@ body {
   }
 }
 
-
-
 @media screen and (max-width: 375px) {
   button .add-button {
     display: inline;
@@ -266,42 +264,109 @@ body {
   }
 }
 
-/*@media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
+  .store div h1 {
+    margin-top: 4rem;
+  }
   .store-items {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+    justify-content: space-between;
   }
-  .store {
-    margin-left: 35rem;
+  .store-items {
+    margin-right: 1rem;
+  }
+  .store-items div h4 {
+    margin-left: 1rem;
+  }
+  .arrow-block .store-arrow {
+    margin-top: 3.5rem;
   }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 376px) {
+  .store div h1 {
+    margin-top: 4rem;
+  }
   .store-items {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+    justify-content: space-between;
   }
-  .store {
-    margin-left: 35rem;
+  .store-items {
+    margin-right: 1rem;
+  }
+  .store-items div h4 {
+    margin-left: 1rem;
+  }
+  .arrow-block .store-arrow {
+    margin-top: 3.5rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 426px) {
+  .store div h1 {
+    margin-top: 4rem;
+  }
   .store-items {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+    justify-content: space-between;
   }
-  .store {
-    margin-left: 40rem;
+  .store-items {
+    margin-right: 1rem;
+  }
+  .store-items div h4 {
+    margin-left: 1rem;
+  }
+  .arrow-block .store-arrow {
+    margin-top: 3.5rem;
   }
 }
 
-@media screen and (max-width: 1024px) {
+/*@media screen and (min-width: 770px) {
+  section {
+    width: 110%;
+  }
+  .store div h1 {
+    margin-top: 4rem;
+  }
   .store-items {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 8rem;
   }
-  .store {
-    margin-right: 20rem;
+  .store-items div div h4 {
+    margin-left: 0rem;
+    margin-right: 26rem;
+  }
+  .arrow-block button {
+    margin-left: 8rem;
+  }
+  .arrow-block .store-arrow {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .store div h1 {
+    margin-top: 4rem;
+  }
+
+  .store-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 6rem;
+  }
+  .store-items div div h4 {
+    margin-left: 3rem;
+  }
+  .arrow-block button {
+    margin-left: 10rem;
+  }
+  .arrow-block .store-arrow {
+    margin-left: 0;
   }
 }*/
