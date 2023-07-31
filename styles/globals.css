@@ -324,7 +324,7 @@ body {
   }
 }
 
-/*@media screen and (min-width: 700px) {
+@media screen and (min-width: 760px) and (max-width: 770px) {
   section {
     width: 110%;
   }
@@ -349,7 +349,7 @@ body {
   }
 }
 
-@media screen and (max-width: 984px) {
+@media screen and (min-width: 984px) and (max-width: 1025px) {
   .store div h1 {
     margin-top: 4rem;
   }
@@ -370,4 +370,3 @@ body {
     margin-left: 0;
   }
 }
-*/
