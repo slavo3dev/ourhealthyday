@@ -5,12 +5,12 @@ import { Layout } from "component/Layout";
 
 
 const BlogPage: FC = () => {
-  return (
-    <Layout>
-          <NavBar />
-          <BlogWelcome />
-    </Layout>
-  );
+	return (
+		<Layout>
+			<NavBar />
+			<BlogWelcome />
+		</Layout>
+	);
 };
 
 export default BlogPage;

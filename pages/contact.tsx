@@ -5,12 +5,12 @@ import { Layout } from "component/Layout";
 
 
 const ContactPage: NextPage = () => {
-  return (
-    <Layout>
-        <NavBar />
-        <ContactForm />
-    </Layout>
-  );
+	return (
+		<Layout>
+			<NavBar />
+			<ContactForm />
+		</Layout>
+	);
 };
 
 export default ContactPage;
