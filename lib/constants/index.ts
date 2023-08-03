@@ -1,3 +1,9 @@
+interface Categories {
+        key: string,
+        value: string
+    }
+
+
 export const CATEGORIES: any = [
 	{ name: "Strength", color: "#14b8a6" },
 	{ name: "Endurance", color: "#14b8a6" },
@@ -8,5 +14,3 @@ export const CATEGORIES: any = [
 	{ name: "Science", color: "#14b8a6" },
 	{ name: "News", color: "#14b8a6" },
 ];
-
-console.log(CATEGORIES);
