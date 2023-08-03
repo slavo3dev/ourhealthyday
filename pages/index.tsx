@@ -8,14 +8,14 @@ import { Subscribe } from "component/Subscribe";
 import { Layout } from "component/Layout";
 
 const Home: NextPage = () => {
-  return (
-    <Layout>
-      <NavBar />
-      <Welcome />
-      <FunctionFactList />
-      <Subscribe />
-    </Layout>
-  );
+	return (
+		<Layout>
+			<NavBar />
+			<Welcome />
+			<FunctionFactList />
+			<Subscribe />
+		</Layout>
+	);
 };
 
 export default Home;
