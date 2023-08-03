@@ -6,7 +6,8 @@ export interface NewResourceFromProps
 
 type TLocationName = "London" | "Belgrade";
 
-export interface IWeatherData {
+export interface IWeatherData 
+{
     location: {
       name: TLocationName;
       region: "City of London, Greater London";
@@ -28,11 +29,7 @@ export interface IWeatherData {
     };
   }
 
-  export interface IAiData {
-    
-  }
-
-  export interface IBlogProps {
+export interface IBlogProps {
     title: string;
     content: string;
     author: string;
