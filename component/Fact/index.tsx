@@ -45,7 +45,7 @@ export const Fact: FC<any> = ({ fact, setFacts }: any) => {
   
 			<span className="tag" style={{ padding: "0.4rem" }}>
 				{fact.category &&
-                    CATEGORIES.find(( cat: any ) => cat?.name.toLowerCase() === fact?.category.toLowerCas(),
+                    CATEGORIES.find(( cat: any ) => cat?.name?.toLowerCase() === fact?.category.toLowerCase(),
                     ) ? (
 						<span
 							style={{
