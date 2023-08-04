@@ -101,13 +101,7 @@ body {
  opacity: 0.4;
 }*/
 
-@media screen and (max-width: 320px) {
-  #hamburger-menu {
-    display: inline;
-    top: 70px;
-    right: 30px;
-  }
-}
+
 
 @media screen and (min-width: 375px) {
   #hamburger-menu {
@@ -137,14 +131,6 @@ body {
   }
 }
 
-@media screen and (max-width: 320px) {
-  .cat-buttons {
-    overflow: scroll;
-    margin-left: 0rem;
-    padding: 8px 0px;
-  }
-}
-
 @media screen and (min-width: 375px) {
   .cat-buttons {
     overflow: scroll;
@@ -166,16 +152,10 @@ body {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .cat-buttons {
-    overflow: scroll;
-  }
-}
 
 @media screen and (min-width: 1075px) {
   .cat-buttons {
-    overflow: hidden;
-    margin-left: 8rem;
+    overflow: scroll;
   }
 }
 
@@ -187,18 +167,57 @@ body {
   }
 }
 
-@media screen and (max-width: 320px) {
-  .add-button {
-    display: inline;
-    bottom: 50px;
-    font-size: 80%;
-  }
-}
 
 @media screen and (max-width: 320px) {
   body {
     padding: 40px 5px 0px;
   }
+
+  .add-button {
+    display: inline;
+    bottom: 50px;
+    font-size: 80%;
+  }
+
+  .ul-margins div {
+    margin-left: 1rem;
+  }
+
+  .fact-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 1.5rem;
+    align-content: center;
+  }
+
+  .store div h1 {
+    margin-top: 4rem;
+  }
+
+  .store-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .store-items {
+    margin-right: 1rem;
+  }
+
+  .store-items div h4 {
+    margin-left: 1rem;
+  }
+
+  .arrow-block .store-arrow {
+    margin-top: 3.5rem;
+  }
+
+  #hamburger-menu {
+    display: inline;
+    top: 70px;
+    right: 30px;
+  }
+  
 }
 
 @media screen and (min-width: 375px) {
@@ -213,11 +232,6 @@ body {
   }
 }
 
-@media screen and (max-width: 320px) {
-  .ul-margins div {
-    margin-left: 1rem;
-  }
-}
 
 @media screen and (min-width: 375px) {
   .ul-margins div {
@@ -231,14 +245,6 @@ body {
   }
 }
 
-@media screen and (max-width: 320px) {
-  .fact-list-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-    gap: 1.5rem;
-    align-content: center;
-  }
-}
 
 @media screen and (min-width: 375px) {
   .fact-list-grid {
@@ -264,25 +270,7 @@ body {
   }
 }
 
-@media screen and (max-width: 320px) {
-  .store div h1 {
-    margin-top: 4rem;
-  }
-  .store-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .store-items {
-    margin-right: 1rem;
-  }
-  .store-items div h4 {
-    margin-left: 1rem;
-  }
-  .arrow-block .store-arrow {
-    margin-top: 3.5rem;
-  }
-}
+
 
 @media screen and (max-width: 376px) {
   .store div h1 {

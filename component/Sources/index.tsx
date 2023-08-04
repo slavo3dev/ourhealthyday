@@ -28,7 +28,7 @@ export const FunctionFactList: FC = () => {
 					.limit(1000);
 
 				if (!error) setFacts(facts);
-				else alert("There was a problem getting data");
+				else alert("There was a problem getting data, please try again");
 				setIsLoading(false);
 			}
 			getSources();
@@ -44,15 +44,14 @@ export const FunctionFactList: FC = () => {
 		<section className="mx-auto container">
 			<div className="mx-auto max-w-screen-xl px-6 py-3 bg-green-200 border-solid border-2 border-teal-800 rounded-full">
 				<div className="flex items-center justify-between text-blue-gray-900 sources-heading">
-					<h1 className="mr-4 cursor-pointer py-1.5 text-teal-800 text-3xl font-semibold">
-            Learning Sources
-					</h1>
-
+					<h3 className="mr-4 cursor-pointer py-1.5 text-teal-800 text-3xl font-semibold">
+            Supplements, Books, Podcasts,Apps Post...any Sources
+					</h3>
 					<button
 						className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded-lg w-auto add-button"
 						onClick={handleOnClose}
 					>
-            Add Source
+            Share Source
 					</button>
 				</div>
 			</div>

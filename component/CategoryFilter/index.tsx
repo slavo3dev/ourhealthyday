@@ -2,12 +2,12 @@ import { FC } from "react";
 import { CATEGORIES } from "@lib/constants";
 
 export const CategoryFilter: FC<any> = ({ setCurrentCategory, setShowForm } ) => {
-	const handleOnClose = () => {
-		setShowForm(true);
-	};
+	// const handleOnClose = () => {
+	// 	setShowForm(true);
+	// };
 	return (
-		<aside>
-			<ul className="flex cat-buttons"> {/*mx-auto max-w-screen-xl px-6 py-3 width-full ml-32*/}
+		<div>
+			<ul className="flex cat-buttons mx-auto max-w-screen-xl width-full ml-32*" >
 				<li>
 					{" "}
 					{/*className="category"*/}
@@ -30,6 +30,6 @@ export const CategoryFilter: FC<any> = ({ setCurrentCategory, setShowForm } ) =>
 					</li>
 				))}
 			</ul>
-		</aside>
+		</div>
 	);
 };
