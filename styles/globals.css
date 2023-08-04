@@ -105,11 +105,15 @@ body {
   .blog-welcome {
     margin-left: 10rem;
   }
+  .cat-buttons {
+    overflow: scroll;
+  }
 }
 
 @media screen and (min-width: 1075px) {
   .cat-buttons {
     overflow: scroll;
+    margin-right: 4rem;
   }
 }
 
@@ -170,13 +174,16 @@ body {
 @media screen and (max-width: 770px) and (min-width: 426px) {
   #hamburger-menu {
     display: inline;
-    margin-top: -0.7rem;
+    margin-top: -0.1rem;
   }
 }
 
 @media screen and (max-width: 770px) {
   .cat-buttons {
     overflow: scroll;
+  }
+  .div-cat-buttons {
+    margin-left: 0.5rem;
   }
 }
 
