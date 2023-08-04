@@ -3,12 +3,12 @@ import React, { FC } from "react";
 export const Welcome: FC = () => {
 	return (
 		<>
-			<div className="flex flex-col bg-white justify-center items-center h-full p-8">
+			<div className="flex flex-col bg-white justify-center items-center h-full p-8 welcome-block">
 				<section className="py-20">
 					<div className="container overflow-hidden">
 						<div className="flex flex-wrap -mx-8">
 							<div className="w-full lg:w-1/2 px-8">
-								<div className="mb-12 ml-16 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+								<div className="mb-12 ml-20 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0 welcome-message">
 									<h2 className="mb-4 text-3xl lg:text-4xl font-bold font-heading max-w-md wow animate__ animate__fadeIn animated">
                     You searched about Brain Health, and now you're in the
                     right place!

@@ -101,53 +101,9 @@ body {
  opacity: 0.4;
 }*/
 
-
-
-/* Hamburger Menu */
-@media screen and (min-width: 375px) {
-  #hamburger-menu {
-    display: inline;
-    top: 70px;
-    right: 50px;
-  }
-}
-
-@media screen and (min-width: 425px) {
-  #hamburger-menu {
-    right: 60px;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  #hamburger-menu {
-    display: inline;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #hamburger-menu {
-    display: none;
-  }
-}
-
-/* Category Buttons */
-@media screen and (min-width: 375px) {
-  .cat-buttons {
-    overflow: scroll;
-    margin-left: 0rem;
-    padding: 8px 0px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .cat-buttons {
-    padding: 10px 0px;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  .cat-buttons {
-    overflow: scroll;
+@media screen and (min-width: 2056px) {
+  .blog-welcome {
+    margin-left: 10rem;
   }
 }
 
@@ -157,119 +113,239 @@ body {
   }
 }
 
-/* Add Button */
-@media screen and (max-width: 375px) {
-  button .add-button {
-    display: inline;
-    top: 25px;
-    font-size: 60%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  body {
-    padding: 40px 5px 0px;
-  }
-
-  .add-button {
-    bottom: 50px;
-    font-size: 80%;
-  }
-
-  .ul-margins div {
-    margin-left: 1rem;
-  }
-
-  .fact-list-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-    gap: 1.5rem;
-    align-content: center;
-  }
-
-  .store div h1 {
-    margin-top: 4rem;
-  }
-
-  .store-items,
-  .store-items div h4 {
-    margin-right: 1rem;
-  }
-
-  .arrow-block .store-arrow {
-    margin-top: 3.5rem;
-  }
-
+@media screen and (min-width: 1024px) {
   #hamburger-menu {
-    right: 30px;
+    display: none;
   }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 982px) and (max-width: 1025px) {
+  .store div h1,
+  .store-items {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .store-items div div h4 {
+    margin-left: 3rem;
+  }
+  .arrow-block button {
+    margin-left: 10rem;
+  }
+  .arrow-block .store-arrow {
+    margin-left: 0;
+  }
+  #hamburger-menu {
+    display: inline;
+    top: 70px;
+    right: 50px;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 770px) {
+  section {
+    width: 110%;
+  }
+  .store-items {
+    margin-right: 8rem;
+  }
+  .store-items div div h4 {
+    margin-left: 0rem;
+    margin-right: 26rem;
+  }
+  .arrow-block button {
+    margin-left: 8rem;
+  }
+  .arrow-block .store-arrow {
+    margin-left: 0;
+  }
+  #hamburger-menu {
+    display: inline;
+    top: 70px;
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 770px) and (min-width: 426px) {
+  #hamburger-menu {
+    display: inline;
+    margin-top: -0.7rem;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .cat-buttons {
+    overflow: scroll;
+  }
+}
+
+/*@media screen and (max-width: 426px) and (min-width: 376px) {
+  #hamburger-menu {
+    display: inline;
+    top: 70px;
+    right: 50px;
+  }
+}*/
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  #hamburger-menu {
+    display: inline;
+    top: 70px;
+    right: 60px;
+  }
+  
   body {
     padding: 40px 20px 0px;
   }
+  .cat-buttons {
+    overflow: scroll;
+    margin-left: 2rem;
+    padding: 8px 0px;
+  }
+  .ul-margins div {
+    margin-left: 0rem;
+  }
+  .fact-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 1.5rem;
+    align-content: center;
+  }
+  .sources-heading h3 {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .div-cat-buttons {
+    margin-left: 0rem;
+    margin-right: 0.5rem;
+  }
+  .welcome-block {
+    padding: 1rem 0rem 1rem 0rem;
+  }
+  .welcome-message {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 425px) and (max-width: 426px) {
   body {
     padding: 40px 30px 0px;
   }
-}
-
-@media screen and (min-width: 375px) {
-  .ul-margins div {
-    margin-left: 2rem;
+  .fact-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 1.5rem;
+    align-content: center;
   }
-}
-
-@media screen and (max-width: 425px) {
   .ul-margins div {
     margin-left: 1rem;
   }
+  #hamburger-menu {
+    display: inline;
+    top: 70px;
+    right: 60px;
+  }
+  .sources-heading h3 {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .div-cat-buttons {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+  }
+  .welcome-block {
+    padding: 1rem 0rem 1rem 0rem;
+  }
+  .welcome-message {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 376px) {
+  .store div h1,
+  .store-items,
+  .arrow-block .store-arrow,
+  button .add-button {
+    margin-top: 4rem;
+  }
+  .add-button,
+  .store-items {
+    display: inline;
+  }
+  .add-button {
+    font-size: 80%;
+    bottom: 50px;
+  }
+  .store-items {
+    margin-right: 1rem;
+  }
+  .store-items div h4 {
+    margin-left: 1rem;
+  }
+  #hamburger-menu {
+    display: inline;
+    top: 70px;
+    right: 30px;
+  }
+}  
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  body {
+    padding: 40px 5px 0px;
+  }
+  .add-button {
+    display: inline;
+    bottom: 50px;
+    font-size: 80%;
+  }
+  .ul-margins div {
+    margin-left: 0rem;
+  }
   .fact-list-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     gap: 1.5rem;
     align-content: center;
   }
-}
-
-@media screen and (max-width: 425px) {
-  .fact-list-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-    gap: 1.5rem;
-    align-content: center;
-  }
-}
-
-/* Blog Welcome Page */
-@media screen and (min-width: 2056px) {
-  .blog-welcome {
-    margin-left: 10rem;
-  }
-}
-
-/* Store Items */
-@media screen and (max-width: 376px),
-       screen and (max-width: 426px),
-       screen and (min-width: 760px) and (max-width: 770px),
-       screen and (min-width: 982px) and (max-width: 1025px) {
   .store div h1 {
     margin-top: 4rem;
   }
-
   .store-items {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-
+  .store-items {
+    margin-right: 1rem;
+  }
+  .store-items div h4 {
+    margin-left: 1rem;
+  }
   .arrow-block .store-arrow {
     margin-top: 3.5rem;
+  }
+  #hamburger-menu {
+    display: inline;
+    top: 70px;
+    right: 30px;
+  }
+  .sources-heading h3 {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .div-cat-buttons {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+  }
+  .welcome-block {
+    padding: 1rem 0rem 1rem 0rem;
+  }
+  .welcome-message {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }

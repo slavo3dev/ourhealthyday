@@ -6,7 +6,7 @@ export const CategoryFilter: FC<any> = ({ setCurrentCategory, setShowForm } ) =>
 	// 	setShowForm(true);
 	// };
 	return (
-		<div className="ml-28">
+		<div className="ml-28 div-cat-buttons">
 			<ul className="flex cat-buttons mx-auto max-w-screen-xl width-full" >
 				<li>
 					{" "}
