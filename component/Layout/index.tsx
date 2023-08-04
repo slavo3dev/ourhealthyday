@@ -5,9 +5,9 @@ type Props = {
 };
 
 export const Layout: FC<Props> = (props) => {
-    return (
-        <main>
-            {props.children}
-        </main>
-    );
+	return (
+		<main>
+			{props.children}
+		</main>
+	);
 };

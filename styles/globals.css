@@ -101,14 +101,9 @@ body {
  opacity: 0.4;
 }*/
 
-@media screen and (max-width: 320px) {
-  #hamburger-menu {
-    display: inline;
-    top: 70px;
-    right: 30px;
-  }
-}
 
+
+/* Hamburger Menu */
 @media screen and (min-width: 375px) {
   #hamburger-menu {
     display: inline;
@@ -119,8 +114,6 @@ body {
 
 @media screen and (min-width: 425px) {
   #hamburger-menu {
-    display: inline;
-    top: 70px;
     right: 60px;
   }
 }
@@ -137,14 +130,7 @@ body {
   }
 }
 
-@media screen and (max-width: 320px) {
-  .cat-buttons {
-    overflow: scroll;
-    margin-left: 0rem;
-    padding: 8px 0px;
-  }
-}
-
+/* Category Buttons */
 @media screen and (min-width: 375px) {
   .cat-buttons {
     overflow: scroll;
@@ -152,10 +138,9 @@ body {
     padding: 8px 0px;
   }
 }
+
 @media screen and (max-width: 425px) {
   .cat-buttons {
-    overflow: scroll;
-    margin-left: 0rem;
     padding: 10px 0px;
   }
 }
@@ -166,19 +151,13 @@ body {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1075px) {
   .cat-buttons {
     overflow: scroll;
   }
 }
 
-@media screen and (min-width: 1075px) {
-  .cat-buttons {
-    overflow: hidden;
-    margin-left: 8rem;
-  }
-}
-
+/* Add Button */
 @media screen and (max-width: 375px) {
   button .add-button {
     display: inline;
@@ -188,16 +167,41 @@ body {
 }
 
 @media screen and (max-width: 320px) {
+  body {
+    padding: 40px 5px 0px;
+  }
+
   .add-button {
-    display: inline;
     bottom: 50px;
     font-size: 80%;
   }
-}
 
-@media screen and (max-width: 320px) {
-  body {
-    padding: 40px 5px 0px;
+  .ul-margins div {
+    margin-left: 1rem;
+  }
+
+  .fact-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 1.5rem;
+    align-content: center;
+  }
+
+  .store div h1 {
+    margin-top: 4rem;
+  }
+
+  .store-items,
+  .store-items div h4 {
+    margin-right: 1rem;
+  }
+
+  .arrow-block .store-arrow {
+    margin-top: 3.5rem;
+  }
+
+  #hamburger-menu {
+    right: 30px;
   }
 }
 
@@ -213,12 +217,6 @@ body {
   }
 }
 
-@media screen and (max-width: 320px) {
-  .ul-margins div {
-    margin-left: 1rem;
-  }
-}
-
 @media screen and (min-width: 375px) {
   .ul-margins div {
     margin-left: 2rem;
@@ -231,15 +229,6 @@ body {
   }
 }
 
-@media screen and (max-width: 320px) {
-  .fact-list-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-    gap: 1.5rem;
-    align-content: center;
-  }
-}
-
 @media screen and (min-width: 375px) {
   .fact-list-grid {
     display: grid;
@@ -258,115 +247,29 @@ body {
   }
 }
 
+/* Blog Welcome Page */
 @media screen and (min-width: 2056px) {
   .blog-welcome {
     margin-left: 10rem;
   }
 }
 
-@media screen and (max-width: 320px) {
+/* Store Items */
+@media screen and (max-width: 376px),
+       screen and (max-width: 426px),
+       screen and (min-width: 760px) and (max-width: 770px),
+       screen and (min-width: 982px) and (max-width: 1025px) {
   .store div h1 {
     margin-top: 4rem;
   }
+
   .store-items {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .store-items {
-    margin-right: 1rem;
-  }
-  .store-items div h4 {
-    margin-left: 1rem;
-  }
+
   .arrow-block .store-arrow {
     margin-top: 3.5rem;
-  }
-}
-
-@media screen and (max-width: 376px) {
-  .store div h1 {
-    margin-top: 4rem;
-  }
-  .store-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .store-items {
-    margin-right: 1rem;
-  }
-  .store-items div h4 {
-    margin-left: 1rem;
-  }
-  .arrow-block .store-arrow {
-    margin-top: 3.5rem;
-  }
-}
-
-@media screen and (max-width: 426px) {
-  .store div h1 {
-    margin-top: 4rem;
-  }
-  .store-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .store-items {
-    margin-right: 1rem;
-  }
-  .store-items div h4 {
-    margin-left: 1rem;
-  }
-  .arrow-block .store-arrow {
-    margin-top: 3.5rem;
-  }
-}
-
-@media screen and (min-width: 760px) and (max-width: 770px) {
-  section {
-    width: 110%;
-  }
-  .store div h1 {
-    margin-top: 4rem;
-  }
-  .store-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-right: 8rem;
-  }
-  .store-items div div h4 {
-    margin-left: 0rem;
-    margin-right: 26rem;
-  }
-  .arrow-block button {
-    margin-left: 8rem;
-  }
-  .arrow-block .store-arrow {
-    margin-left: 0;
-  }
-}
-
-@media screen and (min-width: 982px) and (max-width: 1025px) {
-  .store div h1 {
-    margin-top: 4rem;
-  }
-
-  .store-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-right: 6rem;
-  }
-  .store-items div div h4 {
-    margin-left: 3rem;
-  }
-  .arrow-block button {
-    margin-left: 10rem;
-  }
-  .arrow-block .store-arrow {
-    margin-left: 0;
   }
 }
