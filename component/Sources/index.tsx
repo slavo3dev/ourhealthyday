@@ -43,8 +43,8 @@ export const FunctionFactList: FC = () => {
 	return (
 		<section className="mx-auto container">
 			<div className="mx-auto max-w-screen-xl px-6 py-3 bg-green-200 border-solid border-2 border-teal-800 rounded-full">
-				<div className="flex items-center justify-between text-blue-gray-900 sources-heading">
-					<h3 className="mr-4 cursor-pointer py-1.3 text-teal-800 text-3xl font-semibold">
+				<div className="flex items-center justify-between text-blue-gray-900">
+					<h3 className="mr-4 cursor-pointer py-1.3 text-teal-800 text-3xl font-semibold sources-heading">
             Share: Supplements, Books, Podcasts, Apps, Post or any Sources & Fact
 					</h3>
 					<button
