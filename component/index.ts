@@ -7,5 +7,8 @@ import { WeatherData } from "./WeatherData";
 import { Welcome } from "./Welcome";
 import { IncrementCounter } from "./Counter";
 import { Layout } from "./Layout";
+import { PostCard } from "./PostCard";
+import { PostWidget } from "./PostWidget";
+import { Categories } from "./Categories";
 
-export { BlogWelcome, CategoryFilter, Loader, NavBar, FunctionFactList, WeatherData, Welcome, IncrementCounter, Layout }; 
+export { BlogWelcome, CategoryFilter, Loader, NavBar, FunctionFactList, WeatherData, Welcome, IncrementCounter, Layout, PostCard, Categories, PostWidget }; 
