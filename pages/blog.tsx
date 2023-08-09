@@ -10,7 +10,7 @@ const BlogPage: FC = () => {
 		<Layout>
 			<NavBar />
 			<BlogWelcome />
-			<Post />
+			<Post posts={[]} />
 		</Layout>
 	);
 };
