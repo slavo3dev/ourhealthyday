@@ -1,43 +1,97 @@
-import { FC } from "react";
-import { PostCard } from "component/PostCard";
-import { Categories } from "component/Categories";
-import { PostWidget } from "component/PostWidget";
-import { getPosts } from "services";
+import React, { FC, useState, useEffect } from "react";
+import axios from "axios";
 
-interface Post {
-  title: string;
-  excerpt: string;
+const GRAPHQL_API_URL =
+	"https://api-us-west-2.hygraph.com/v2/cll2csb0x0ic001un2jzvdvho/master";
+
+const GRAPHQL_QUERY = `
+  query {
+    posts {
+      title
+      updatedAt
+      content {
+        text
+      }
+      author {
+        bio
+        name
+        id
+        photo {
+          url
+        }
+      }
+      createdAt
+      slug
+      title
+      excerpt
+      featuredImage {
+        url
+      }
+      categories {
+        name
+        slug
+      }
+    }
+  }
+`;
+
+interface BlogPosts {
+	updatedAt: string;
+	id: string;
+	createdAt: string;
+	title: string;
+	slug: string;
+	bio: string;
+	name: string;
+	url: string;
+	content: {
+		text: string; 
+	}
 }
 
-interface PostProps {
-  posts: Post[];
-}
+export const BlogPost: FC = () => {
+	const [blogPosts, setBlogPosts] = useState<BlogPosts[]>([]);
 
-export const Post: FC<PostProps> = ({ posts }) => {
+	useEffect(() => {
+		axios
+			.post(GRAPHQL_API_URL, { query: GRAPHQL_QUERY})
+			.then((response) => {
+				const posts = response?.data?.data?.posts;
+				if (posts) {
+					setBlogPosts(posts);
+				}
+			})
+			.catch((error) => {
+				console.error("Error fetching blog posts:", error);
+			});
+		console.log("BlogPost");
+	}, []);
+
+
 	return (
-		<div className="container mx-auto px-10 mb-8">
-			<h1>OHD Blog</h1>
-			<div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-				<div className="lg:col-span-8 col-span-1">
-					{posts.map((post) => (
-						<PostCard post={post} key={post.title} />
-					))}
-				</div>
-				<div className="lg:col-span-4 col-span-1">
-					<div className="lg: sticky realtive top-8">
-						<PostWidget />
-						<Categories />
+		<div className="container mx-auto px-4">
+			<h2 className="text-2xl font-bold mb-4">Blog Posts</h2>
+			<ul>
+				{blogPosts.map((post) => (
+					<li key={post.id} className="mb-4">
+						<a 
+							className="text-blue-500 font-bold">
+							{post.title}
+						</a> {/*href={`/blog/${post.slug}`}*/}
+						<p className="text-gray-500">
+							Published on:{""}
+							{new Date(post.createdAt).toLocaleDateString()}
+						</p>
+					</li>
+				))}
+			</ul>
+			<div>
+				{blogPosts.map((post) => (
+					<div key={post.slug} className="mb-4">
+						<p>{post.content.text}</p>
 					</div>
-				</div>
+				))}
 			</div>
 		</div>
 	);
 };
-
-export async function getStaticProps() {
-	const posts = await getPosts();
-
-	return {
-		props: { posts },
-	};
-}
