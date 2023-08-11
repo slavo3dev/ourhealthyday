@@ -48,5 +48,19 @@ export interface IBlogPosts {
     url: string;
     content: {
       text: string; 
+      raw: string;
+      markdown: string;
+      html: string;
+    }
+    author: {
+      bio: string;
+      name: string;
+      id: string;
+      photo: {
+        url: string;
+      }
+    }
+    featuredImage: {
+      url: string;
     }
   }

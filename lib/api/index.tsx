@@ -8,6 +8,9 @@ export const GRAPHQL_QUERY = `
       updatedAt
       content {
         text
+        raw
+        markdown
+        html
       }
       author {
         bio

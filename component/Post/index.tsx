@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React, { FC, useState, useEffect } from "react";
 import { GRAPHQL_API_URL, GRAPHQL_QUERY } from "@lib/api";
 import { IBlogPosts } from "@lib/types";
@@ -23,25 +24,36 @@ export const BlogPost: FC = () => {
 
 
 	return (
-		<div className="container mx-auto px-4">
-			<h2 className="text-2xl font-bold mb-4">Blog Posts</h2>
-			<ul>
-				{blogPosts.map((post) => (
-					<li key={post.id} className="mb-4">
-						<a 
-							className="text-blue-500 font-bold">
-							{post.title}
-						</a> {/*href={`/blog/${post.slug}`}*/}
-						<p className="text-gray-500">
-							Published on:{""}
-							{new Date(post.createdAt).toLocaleDateString()}
-						</p>
-					</li>
-				))}
-			</ul>
+		<div className="container mx-auto px-20">
+			<h2 className="text-center text-teal-800 text-6xl font-semibold mb-4">Blog Posts</h2>
+			<div className="flex pt-12">
+				<div className="h-64 w-64">
+					{blogPosts.map((post) => (
+						<img key={post.featuredImage.url} src={post.featuredImage.url} alt={post.title} />
+					))}
+				</div>
+				<ul>
+					{blogPosts.map((post) => (
+						<li key={post.id} className="mb-4">
+							<a 
+								className="text-green-500 text-4xl pl-52 font-bold">
+								{post.title}
+							</a> {/*href={`/blog/${post.slug}`}*/}
+							<div className="bg-lime-100 mt-20 pl-4 ml-2">
+							<p key={post.author.name} className="text-teal-700 text-lg">Author: {post.author.name}</p>
+							<p key={post.author.bio} className="text-teal-700">{post.author.bio}</p>
+							<p className="text-gray-500">
+							Published on: {""}
+								{new Date(post.createdAt).toLocaleDateString()}
+							</p>
+							</div>
+						</li>
+					))}
+				</ul>
+			</div>
 			<div>
 				{blogPosts.map((post) => (
-					<div key={post.slug} className="mb-4">
+					<div key={post.slug} className="mb-4 bg-green-100">
 						<p>{post.content.text}</p>
 					</div>
 				))}
