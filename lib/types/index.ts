@@ -36,3 +36,17 @@ export interface IBlogProps {
     author: string;
     date: string;
   }
+
+export interface IBlogPosts {
+    updatedAt: string;
+    id: string;
+    createdAt: string;
+    title: string;
+    slug: string;
+    bio: string;
+    name: string;
+    url: string;
+    content: {
+      text: string; 
+    }
+  }

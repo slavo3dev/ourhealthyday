@@ -1,56 +1,10 @@
 import React, { FC, useState, useEffect } from "react";
+import { GRAPHQL_API_URL, GRAPHQL_QUERY } from "@lib/api";
+import { IBlogPosts } from "@lib/types";
 import axios from "axios";
 
-const GRAPHQL_API_URL =
-	"https://api-us-west-2.hygraph.com/v2/cll2csb0x0ic001un2jzvdvho/master";
-
-const GRAPHQL_QUERY = `
-  query {
-    posts {
-      title
-      updatedAt
-      content {
-        text
-      }
-      author {
-        bio
-        name
-        id
-        photo {
-          url
-        }
-      }
-      createdAt
-      slug
-      title
-      excerpt
-      featuredImage {
-        url
-      }
-      categories {
-        name
-        slug
-      }
-    }
-  }
-`;
-
-interface BlogPosts {
-	updatedAt: string;
-	id: string;
-	createdAt: string;
-	title: string;
-	slug: string;
-	bio: string;
-	name: string;
-	url: string;
-	content: {
-		text: string; 
-	}
-}
-
 export const BlogPost: FC = () => {
-	const [blogPosts, setBlogPosts] = useState<BlogPosts[]>([]);
+	const [blogPosts, setBlogPosts] = useState<IBlogPosts[]>([]);
 
 	useEffect(() => {
 		axios
