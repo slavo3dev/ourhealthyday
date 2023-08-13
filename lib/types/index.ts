@@ -63,4 +63,5 @@ export interface IBlogPosts {
     featuredImage: {
       url: string;
     }
+    excerpt: string;
   }
