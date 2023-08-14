@@ -20,20 +20,30 @@ export const BlogContent: FC = () => {
       .catch((error) => {
         console.error("Error fetching blog posts:", error);
       });
-    console.log("BlogPost");
+    console.log("BlogContent");
   }, []);
 
   return (
-    <div>
-        <BlogPostCard />
-      {/*this is content, need to make the component for posts only, and then import it here*/}
-      <div>
-        {blogPosts.map((post) => (
-          <div key={post.slug} className="mb-4 bg-green-300">
-            <p>{post.content.text}</p>
+    <div className="font-serif">
+      <BlogPostCard />
+      {blogPosts.map((post) => (
+        <div key={post.slug} className="mb-4 bg-green-300 py-12 bg-green-300 mx-28 px-16 rounded-lg drop-shadow-2xl">
+          <h2 className="text-green-900 text-3xl font-bold text-center">
+            {post.title}
+          </h2>
+          <p>
+            Updated At:{" "}
+            {new Date(post.updatedAt).toLocaleDateString()}
+          </p>
+
+          {/* HTML content */}
+          <div>
+            <div className="text-lg pt-12"
+              dangerouslySetInnerHTML={{ __html: post.content.html }}
+            />
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

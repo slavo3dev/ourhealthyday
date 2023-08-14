@@ -24,8 +24,8 @@ export const BlogPostCard: FC = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-20 py-8">
-      <h2 className="text-center text-teal-800 text-6xl font-semibold mb-4">
+    <div className="container mx-auto px-20 py-8 font-serif">
+      <h2 className="text-center text-teal-800 text-6xl font-semibold mb-4 py-12">
         Blog Posts
       </h2>
       <div className="grid grid-rows-1 grid-flow-col gap-4 pt-12 bg-green-300 pl-16 rounded-lg drop-shadow-2xl">
@@ -48,14 +48,19 @@ export const BlogPostCard: FC = () => {
                   {post.title}
                 </a>{" "}
               </Link>
-              {/*href={`/blog/${post.slug}`}*/}
 
               {blogPosts.map((post) => (
                 <div
                   key={post.slug}
                   className="row-span-2 col-span-2 ... bg-green-100 text-sm mt-2 px-6 py-6 mr-4 rounded-lg drop-shadow-md"
                 >
-                  <p> {post.excerpt}</p>
+                  <p>{post.excerpt}</p>
+                  <div className="flex space-x-4 pt-4">
+                  <Link href="https://www.slavo.io/"><p className="hover:font-mono">Author: {post.author.name}</p></Link>
+                  <p>Published on: {""}
+                  {new Date(post.createdAt).toLocaleDateString()}
+                  </p>
+                  </div>
                 </div>
               ))}
             </li>
