@@ -127,6 +127,33 @@ body {
   .arrow-block .store-arrow {
     margin-top: 3.5rem;
   }
+  .postcard-section {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  
+  .postcard-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0%;
+  }
+
+  .postcard-div li {
+    text-align: center;
+  }
+
+  .postcard-div li div {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .postcontent-section {
+    margin: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 /* Phone 320px - 480px */
@@ -172,8 +199,37 @@ body {
   .blog-welcome {
     margin-left: 10rem;
   }
+
   .sources-heading {
     font-size: 0.8rem;
     line-height: 1rem;
+  }
+
+  .postcard-section {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  
+  .postcard-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0%;
+  }
+
+  .postcard-div li {
+    text-align: center;
+  }
+
+  .postcard-div li div {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .postcontent-section {
+    margin: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }

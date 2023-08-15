@@ -24,10 +24,11 @@ export const BlogContent: FC = () => {
   }, []);
 
   return (
-    <div className="font-serif">
+    <>
       <BlogPostCard />
+      <div className="font-serif">
       {blogPosts.map((post) => (
-        <div key={post.slug} className="mb-4 bg-green-300 py-12 bg-green-300 mx-28 px-16 rounded-lg drop-shadow-2xl">
+        <div key={post.slug} className="mb-4 bg-green-300 py-12 bg-green-300 mx-28 px-16 rounded-lg drop-shadow-2xl postcontent-section">
           <h2 className="text-green-900 text-3xl font-bold text-center">
             {post.title}
           </h2>
@@ -45,5 +46,6 @@ export const BlogContent: FC = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };

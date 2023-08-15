@@ -24,18 +24,20 @@ export const BlogPostCard: FC = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-20 py-8 font-serif">
+    <div className="container mx-auto px-20 py-8 font-serif postcard-section">
       <h2 className="text-center text-teal-800 text-6xl font-semibold mb-4 py-12">
         Blog Posts
       </h2>
-      <div className="grid grid-rows-1 grid-flow-col gap-4 pt-12 bg-green-300 pl-16 rounded-lg drop-shadow-2xl">
+
+
+      <div className="grid grid-rows-1 grid-flow-col gap-4 pt-12 bg-green-300 pl-16 rounded-lg drop-shadow-2xl postcard-div">
         <div className="h-64 w-64 row-span-3 ...">
           {blogPosts.map((post) => (
             <img
               key={post.featuredImage.url}
               src={post.featuredImage.url}
               alt={post.title}
-              className="rounded-lg drop-shadow-md"
+              className="rounded-lg drop-shadow-md postcard-img"
             />
           ))}
         </div>
