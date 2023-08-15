@@ -47,6 +47,7 @@ export const NewResourceFrom: FC<NewResourceFromProps> = ({
 					body: JSON.stringify(payload),
 				});
 
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				setSources((sources: any) => [sources[0], ...sources]);
 
 				setTimeout(() => {
