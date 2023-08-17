@@ -1,6 +1,7 @@
 export interface NewResourceFromProps
 {
-    setSources: any;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    setSources: any; 
     setShowForm: (arg: boolean) => void;
 }
 
@@ -34,4 +35,33 @@ export interface IBlogProps {
     content: string;
     author: string;
     date: string;
+  }
+
+export interface IBlogPosts {
+    updatedAt: string;
+    id: string;
+    createdAt: string;
+    title: string;
+    slug: string;
+    bio: string;
+    name: string;
+    url: string;
+    content: {
+      text: string; 
+      raw: string;
+      markdown: string;
+      html: string;
+    }
+    author: {
+      bio: string;
+      name: string;
+      id: string;
+      photo: {
+        url: string;
+      }
+    }
+    featuredImage: {
+      url: string;
+    }
+    excerpt: string;
   }
