@@ -25,10 +25,9 @@ export const BlogContent: FC = () => {
 
   return (
     <>
-      <BlogPostCard />
       <div className="font-serif">
       {blogPosts.map((post) => (
-        <div key={post.slug} className="mb-4 bg-green-300 py-12 bg-green-300 mx-28 px-16 rounded-lg drop-shadow-2xl postcontent-section">
+        <div key={post.slug} className="my-12 py-12 bg-green-300 mx-28 px-16 rounded-lg drop-shadow-2xl postcontent-section">
           <h2 className="text-green-900 text-3xl font-bold text-center">
             {post.title}
           </h2>
@@ -36,6 +35,18 @@ export const BlogContent: FC = () => {
             Updated At:{" "}
             {new Date(post.updatedAt).toLocaleDateString()}
           </p>
+
+          <div className="max-w-xs">
+                      <p className="bg-blue-400 px-1 rounded-r-lg">
+                        Category:{" "}
+                        {post.categories.map((category, index) => (
+                          <span key={category.slug}>
+                            {index > 0 && ", "}
+                            {category.name}
+                          </span>
+                        ))}
+                      </p>
+                    </div>
 
           {/* HTML content */}
           <div>

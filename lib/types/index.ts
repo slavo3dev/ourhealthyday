@@ -64,4 +64,8 @@ export interface IBlogPosts {
       url: string;
     }
     excerpt: string;
+    categories: {
+      name: string;
+      slug: string;
+    }[];
   }
