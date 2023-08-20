@@ -4,6 +4,7 @@ import { GRAPHQL_API_URL, GRAPHQL_QUERY } from "@lib/api";
 import { IBlogPosts } from "@lib/types";
 import axios from "axios";
 import Link from "next/link";
+import { CategorySelection } from "component/SearchCategory";
 
 export const BlogPostCard: FC = () => {
   const [blogPosts, setBlogPosts] = useState<IBlogPosts[]>([]);
@@ -28,6 +29,8 @@ export const BlogPostCard: FC = () => {
       <h2 className="text-center text-teal-800 text-6xl font-semibold mb-4 py-12">
         Blog Posts
       </h2>
+      
+			<CategorySelection />
 
       <div className="grid grid-rows-1 grid-flow-col gap-4 pt-12 bg-green-300 pl-16 rounded-lg drop-shadow-2xl postcard-div">
         <div className="h-64 w-64 row-span-3 ...">
