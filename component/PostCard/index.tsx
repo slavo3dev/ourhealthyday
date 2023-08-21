@@ -8,6 +8,9 @@ import { CategorySelection } from "component/SearchCategory";
 
 export const BlogPostCard: FC = () => {
   const [blogPosts, setBlogPosts] = useState<IBlogPosts[]>([]);
+  const [selectedCategory, setSelectedCategory] =
+    useState<string>("");
+  const [selectedAuthor, setSelectedAuthor] = useState<string>("");
 
   useEffect(() => {
     axios
@@ -24,17 +27,39 @@ export const BlogPostCard: FC = () => {
     console.log("BlogPost");
   }, []);
 
+  const handleCategoryChange = (selectedCategory: string) => {
+    setSelectedCategory(selectedCategory);
+  };
+
+  const handleAuthorChange = (selectedAuthor: string) => {
+    setSelectedAuthor(selectedAuthor);
+  };
+
+  const filteredPosts = blogPosts.filter((post) => {
+    if (
+      selectedCategory &&
+      post.categories.some((cat) => cat.name === selectedCategory)
+    ) {
+      return true;
+    }
+    if (selectedAuthor && post.author.name === selectedAuthor) {
+      return true;
+    }
+    return false;
+  });
+
   return (
     <div className="container mx-auto px-20 py-8 font-serif postcard-section">
       <h2 className="text-center text-teal-800 text-6xl font-semibold mb-4 py-12">
         Blog Posts
       </h2>
-      
-			<CategorySelection />
-
+      <CategorySelection
+        onCategoryChange={handleCategoryChange}
+        onAuthorChange={handleAuthorChange}
+      />
       <div className="grid grid-rows-1 grid-flow-col gap-4 pt-12 bg-green-300 pl-16 rounded-lg drop-shadow-2xl postcard-div">
-        <div className="h-64 w-64 row-span-3 ...">
-          {blogPosts.map((post) => (
+      <div className="h-64 w-64 row-span-3 ...">
+          {filteredPosts.map((post) => (
             <img
               key={post.featuredImage.url}
               src={post.featuredImage.url}
@@ -44,7 +69,7 @@ export const BlogPostCard: FC = () => {
           ))}
         </div>
         <ul>
-          {blogPosts.map((post) => (
+          {filteredPosts.map((post) => (
             <li key={post.id} className="mb-4">
               <Link href="./posts">
                 {" "}
@@ -53,23 +78,18 @@ export const BlogPostCard: FC = () => {
                 </a>{" "}
               </Link>
 
-              {blogPosts.map((post) => (
+              {filteredPosts.map((post) => (
                 <div
                   key={post.slug}
                   className="row-span-2 col-span-2 ... bg-green-100 text-sm mt-2 px-6 py-6 mr-4 rounded-lg drop-shadow-md"
                 >
                   <p>{post.excerpt}</p>
                   <div className="flex space-x-4 pt-4">
-                    <Link href="https://www.slavo.io/">
-                      <p className="hover:font-mono">
-                        Author: {post.author.name}
-                      </p>
-                    </Link>
-                    <p>
-                      Published on: {""}
-                      {new Date(post.createdAt).toLocaleDateString()}
-                    </p>
-                    <div>
+                  <Link href="https://www.slavo.io/"><p className="hover:font-mono">Author: {post.author.name}</p></Link>
+                  <p>Published on: {""}
+                  {new Date(post.createdAt).toLocaleDateString()}
+                  </p>
+                  <div>
                       <p className="bg-blue-400 px-1 rounded-r-lg">
                         Category:{" "}
                         {post.categories.map((category, index) => (
