@@ -69,3 +69,7 @@ export interface IBlogPosts {
       slug: string;
     }[];
   }
+
+export interface ICategorySelectionProps {
+    onSearchButtonClick: (category: string, author: string, title: string) => void;
+  }
