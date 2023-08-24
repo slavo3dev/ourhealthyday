@@ -89,13 +89,13 @@ export const BlogPostCard: FC = () => {
 
 	return (
 		<div className="container mx-auto px-20 py-8 font-serif postcard-section">
-			<h2 className="text-center text-teal-800 text-6xl font-semibold mb-4 py-12">
+			<h2 className="text-center text-black text-6xl font-semibold mb-4 py-12">
         Blog Posts
 			</h2>
 			<CategorySelection
 				onSearchButtonClick={handleSearchButtonClick}
 			/>
-			<div className="pt-12 bg-green-300 pl-16 rounded-lg drop-shadow-2xl postcard-div">
+			<div className="pt-12 bg-white border-2 border-teal-500 pl-16 rounded-lg drop-shadow-2xl postcard-div">
 				{filteredPosts.map((post) => (
 					<div
 						key={post.id}
@@ -115,14 +115,14 @@ export const BlogPostCard: FC = () => {
 							<li key={post.id} className="mb-4">
 								<Link href="./posts">
 									{" "}
-									<a className="col-span-2 ... text-green-900 text-3xl font-bold ml-2">
+									<a className="col-span-2 ... text-black underline text-3xl font-bold ml-2">
 										{post.title}
 									</a>{" "}
 								</Link>
 
 								<div
 									key={post.slug}
-									className="row-span-2 col-span-2 ... bg-green-100 text-sm mt-2 px-6 py-6 mr-4 rounded-lg drop-shadow-md"
+									className="row-span-2 col-span-2 ...shadow-lg bg-gradient-to-b from-white to-blue-100 text-sm mt-2 px-6 py-6 mr-4 rounded-lg"
 								>
 									<p>{post.excerpt}</p>
 									<div className="flex space-x-4 pt-4">
@@ -138,7 +138,7 @@ export const BlogPostCard: FC = () => {
 											).toLocaleDateString()}
 										</p>
 										<div>
-											<p className="bg-green-400 px-4 rounded-full">
+											<p className="bg-green-400 px-4 italic rounded-full">
                             Category:{" "}
 												{post.categories.map(
 													(category, index) => (

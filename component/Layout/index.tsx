@@ -5,9 +5,9 @@ type Props = {
 };
 
 export const Layout: FC<Props> = (props) => {
-    return (
-        <main>
-            {props.children}
-        </main>
-    );
+	return (
+		<main className="font-serif">
+			{props.children}
+		</main>
+	);
 };

@@ -42,13 +42,13 @@ export const FunctionFactList: FC = () => {
 
 	return (
 		<section className="mx-auto container">
-			<div className="mx-auto max-w-screen-xl px-6 py-3 bg-green-200 border-solid border-2 border-teal-800 rounded-full">
+			<div className="w-full px-6 py-3 ">
 				<div className="flex items-center justify-between text-blue-gray-900">
-					<h3 className="mr-4 cursor-pointer py-1.3 text-teal-800 text-3xl font-semibold sources-heading">
+					<h3 className="mr-4 cursor-pointer py-1.3 text-black text-3xl sources-heading">
             Share: Supplements, Books, Podcasts, Apps, Post or any Sources & Fact
 					</h3>
 					<button
-						className="hover:bg-teal-100 bg-teal-500 text-white hover:text-red-500 font-bold py-2 px-4 rounded-lg w-auto add-button"
+						className="hover:font-bold bg-white text-black border-2 border-teal-500 py-2 px-4 rounded-lg w-auto add-button"
 						onClick={handleOnClose}
 					>
             Share Source

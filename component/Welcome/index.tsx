@@ -9,7 +9,7 @@ export const Welcome: FC = () => {
 						<div className="flex flex-wrap -mx-8">
 							<div className="w-full lg:w-1/2 px-8">
 								<div className="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
-									<h2 className="mb-4 text-3xl lg:text-4xl font-bold font-heading max-w-md wow animate__ animate__fadeIn animated">
+									<h2 className="mb-4 text-3xl lg:text-4xl font-heading max-w-md wow animate__ animate__fadeIn animated">
                     You searched about Brain Health, and now you're in the
                     right place!
 									</h2>

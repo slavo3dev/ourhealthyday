@@ -57,8 +57,8 @@ export const Subscribe: FC = () => {
 
 	return (
 		<>
-			<div className="text-center max-w-xl mx-auto mt-8 mb-8">
-				<h2 className="mb-4 text-3xl lg:text-3xl text-teal-600 font-bold font-heading">
+			<div className="text-center max-w-xl mx-auto mb-11">
+				<h2 className="mb-4 mt-20 text-3xl lg:text-3xl text-teal-600 font-bold font-heading">
 					<span>Subscribe to </span>
 					<span className="text-teal-300">OurHealthyDay </span> Newletter
 				</h2>

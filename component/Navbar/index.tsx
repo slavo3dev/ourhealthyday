@@ -12,9 +12,9 @@ export const NavBar: FC = () => {
 
 	return (
 		<>
-			<nav className="mx-auto max-w-screen-xl px-6 py-3 bg-green-200 border-solid border-2 border-teal-800 rounded-full">
+			<nav className="w-full px-6 py-3 bg-white border-2 border-white border-b-teal-500 ... ">
 				<div className="flex items-center justify-between text-blue-gray-900">
-					<div className="mr-4 cursor-pointer py-1.5 text-teal-800 text-3xl animate-pulse">
+					<div className="mr-4 cursor-pointer py-1.5 text-black text-5xl">
 						<Link href="/">Our Healthy Day</Link>
 					</div>
 					<div className="hidden lg:block">

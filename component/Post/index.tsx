@@ -25,8 +25,8 @@ export const BlogContent: FC = () => {
 		<>
 			<div className="font-serif mt-5">
 				{blogPosts.map((post) => (
-					<div key={post.slug} className="my-12 py-12 bg-green-300 mx-12 px-16 rounded-lg drop-shadow-2xl postcontent-section">
-						<h2 className=" flex text-green-900 text-3xl font-bold text-center">
+					<div key={post.slug} className="my-12 py-12 bg-teal-50 border-2 border-teal-500 mx-12 px-16 rounded-lg drop-shadow-2xl shadow-lg bg-gradient-to-b from-white to-blue-100 postcontent-section">
+						<h2 className=" flex text-black text-3xl font-bold text-center">
 							{post.title}
 						</h2>
 						<div className="pt-8 inline-block">
@@ -45,7 +45,7 @@ export const BlogContent: FC = () => {
 						</p>
 
 						<div className="max-w-xs">
-							<p className="bg-green-400 px-4 rounded-full">
+							<p className="bg-green-400 px-4 italic rounded-full">
                         Category:{" "}
 								{post.categories.map((category, index) => (
 									<span key={category.slug}>

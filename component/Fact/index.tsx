@@ -24,14 +24,14 @@ export const Fact: FC<any> = ({ fact, setFacts }: any) => {
 	}
   
 	return (
-		<li className="max-w-sm rounded overflow-hidden shadow-lg bg-blue-100 p-2 hover:bg-slate-100 transition-duration: 900ms">
+		<li className="max-w-sm rounded overflow-hidden shadow-lg bg-gradient-to-b from-white to-blue-100 p-2">
 			<p>
 				{badSource ? (
 					<span className="px-2 py-2">[ ⛔️ BAD SOURCE ]</span>
 				) : null}
 				{fact.text}
-				<a className="source" href={fact.source} target="_blank">
-            (Source)
+				<a className="source italic" href={fact.source} target="_blank">
+					{" "}(Source)
 				</a>
 			</p>
   
@@ -43,7 +43,7 @@ export const Fact: FC<any> = ({ fact, setFacts }: any) => {
                 {fact.category}
               </span>*/}
   
-			<span className="tag" style={{ padding: "0.4rem" }}>
+			<span className="tag italic font-bold" style={{ padding: "0.4rem" }}>
 				{fact.category &&
                     CATEGORIES.find(( cat: any ) => cat?.name?.toLowerCase() === fact?.category.toLowerCase(),
                     ) ? (

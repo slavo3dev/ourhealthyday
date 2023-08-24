@@ -5,16 +5,16 @@ interface Categories {
 
 
 export const CATEGORIES: Categories[] = [
-	{ name: "Mushroom_Supplemets", color: "#14b8a6" },
-	{ name: "Mushroom_Psychedelics", color: "#14b8a6" },
-	{ name: "Mushroom_World", color: "#14b8a6" },
-	{ name: "Mental_Health", color: "#14b8a6" },
-	{ name: "Habit_Development", color: "#14b8a6" },
-	{ name: "Brain_Food", color: "#14b8a6" },
-	{ name: "Science", color: "#14b8a6" },
-	{ name: "Strength", color: "#14b8a6" },
-	{ name: "Endurance", color: "#14b8a6" },
-	{ name: "Anxiety", color: "#14b8a6" },
-	{ name: "Workout", color: "#14b8a6" },
-	{ name: "News", color: "#14b8a6" },
+	{ name: "Mushroom_Supplemets", color: "#ffffff" },
+	{ name: "Mushroom_Psychedelics", color: "#ffffff" },
+	{ name: "Mushroom_World", color: "#ffffff" },
+	{ name: "Mental_Health", color: "#ffffff" },
+	{ name: "Habit_Development", color: "#ffffff" },
+	{ name: "Brain_Food", color: "#ffffff" },
+	{ name: "Science", color: "#ffffff" },
+	{ name: "Strength", color: "#ffffff" },
+	{ name: "Endurance", color: "#ffffff" },
+	{ name: "Anxiety", color: "#ffffff" },
+	{ name: "Workout", color: "#ffffff" },
+	{ name: "News", color: "#ffffff" },
 ];
