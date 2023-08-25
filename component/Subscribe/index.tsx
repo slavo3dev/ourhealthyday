@@ -45,7 +45,7 @@ export const Subscribe: FC = () => {
 				/>
 			</div>
 			<button
-				className="w-full md:w-auto py-4 px-8 text-xs text-teal text-teal-800 hover:text-teal font-semibold leading-none border border-teal-300 hover:border-teal-300 bg-teal hover:bg-teal-500 rounded transition duration-300 ease-in-out animate-pulse"
+				className="w-full md:w-auto py-4 px-8 text-xs text-teal text-teal-800 hover:text-teal font-semibold leading-none border border-teal-300 hover:border-teal-300 bg-white hover:bg-teal-500 rounded transition duration-300 ease-in-out"
 				type="submit"
 				onClick={handleSubscribe}
 			>
@@ -62,7 +62,7 @@ export const Subscribe: FC = () => {
 					<span>Subscribe to </span>
 					<span className="text-teal-300">OurHealthyDay </span> Newletter
 				</h2>
-				<p className="mb-8 text-white">
+				<p className="mb-8 text-gray-600">
           All your information is completely confidential
 				</p>
 				{state === "Success" ? (

@@ -19,7 +19,7 @@ export const NavBar: FC = () => {
 					</div>
 					<div className="hidden lg:block">
 						<ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-							<div className="p-1 font-medium">
+							<div className="p-1 font-medium border-2 border-white border-l-teal-500 pl-7">
 								<Link
 									className="flex items-center text-teal-800 hover:text-blue-500 transition-colors text-lg"
 									href="/"
@@ -27,7 +27,7 @@ export const NavBar: FC = () => {
 									<button>Home</button>
 								</Link>
 							</div>
-							<div className="p-1 font-medium">
+							<div className="p-1 font-medium border-2 border-white border-l-teal-500 pl-7">
 								<Link
 									className="flex items-center text-teal-800 hover:text-blue-500 transition-colors text-lg"
 									href="/blog"
@@ -35,7 +35,7 @@ export const NavBar: FC = () => {
 									<button>Blog</button>
 								</Link>
 							</div>
-							<div className="p-1 font-medium">
+							<div className="p-1 font-medium border-2 border-white border-l-teal-500 pl-7">
 								<Link
 									className="flex items-center text-teal-800 hover:text-blue-500 transition-colors text-lg"
 									href="/store"
@@ -43,7 +43,7 @@ export const NavBar: FC = () => {
                 Store
 								</Link>
 							</div>
-							<div className="p-1 font-medium">
+							<div className="p-1 font-medium border-2 border-white border-l-teal-500 pl-7">
 								<Link
 									className="flex items-center text-teal-800 hover:text-blue-500 transition-colors text-lg"
 									href="/contact"
@@ -51,7 +51,7 @@ export const NavBar: FC = () => {
                 Contact
 								</Link>
 							</div>
-							<div className="p-1 font-medium">
+							<div className="p-1 font-medium border-2 border-white border-l-teal-500 pl-7">
 								<Link
 									className="flex items-center text-teal-800 hover:text-blue-500 transition-colors text-lg"
 									href="/login"

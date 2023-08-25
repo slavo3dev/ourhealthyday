@@ -13,21 +13,21 @@ export const CategorySelection: FC<ICategorySelectionProps> = ({
 
 	return (
 		<div className="my-8 h-32">
-			<h2 className="text-center pt-3 text-xl tracking-tight text-green-900 drop-shadow-sm tracking-widest">
+			<h2 className="text-center pt-3 text-xl text-black drop-shadow-sm tracking-widest">
 				Search posts by
-				<mark className="px-2 text-black bg-green-100 rounded">author</mark>
+				<span className="px-2 text-black italic">author</span>
 				or
-				<mark className="px-2 text-black bg-green-100 rounded">category</mark>
+				<span className="px-2 text-black italic">category</span>
 				or
-				<mark className="px-2 text-black bg-green-100 rounded">title</mark>
+				<span className="px-2 text-black italic">title</span>
 			</h2>
 			<form className="flex place-content-evenly pt-10 pb-10 align-center">
 				<label htmlFor="category">
-					<span className="text-2xl tracking-tight text-green-900">
+					<span className="text-2xl tracking-tight text-black">
 						Category
 					</span>
 					<select
-						className="drop-shadow-sm bg-green-100 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-5 py-1 ml-2 text-center inline-flex items-center"
+						className="drop-shadow-sm bg-white focus:ring-2 focus:outline-none focus:ring-teal-500 font-medium rounded-lg text-sm px-5 py-1 ml-2 text-center inline-flex items-center"
 						id="category"
 						value={selectedCategory}
 						onChange={(e) => setSelectedCategory(e.target.value)}
@@ -42,11 +42,11 @@ export const CategorySelection: FC<ICategorySelectionProps> = ({
 				</label>
 
 				<label htmlFor="author">
-					<span className="text-2xl tracking-tight text-green-900">
+					<span className="text-2xl tracking-tight text-black">
 						Author
 					</span>
 					<select
-						className="drop-shadow-sm bg-green-100 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-5 py-1 ml-2 text-center inline-flex items-center"
+						className="drop-shadow-sm bg-white focus:ring-2 focus:outline-none focus:ring-teal-500 font-medium rounded-lg text-sm px-5 py-1 ml-2 text-center inline-flex items-center"
 						id="author"
 						value={selectedAuthor}
 						onChange={(e) => setSelectedAuthor(e.target.value)}
@@ -61,11 +61,11 @@ export const CategorySelection: FC<ICategorySelectionProps> = ({
 				</label>
 
 				<label htmlFor="title">
-					<span className="text-2xl tracking-tight text-green-900">
+					<span className="text-2xl tracking-tight text-black">
 						Title
 					</span>
 					<input
-						className="drop-shadow-sm bg-green-100 focus:ring-4 focus:outline-none focus:ring-green-600 font-medium rounded-lg text-sm px-5 py-1 ml-2 text-center inline-flex items-center"
+						className="drop-shadow-sm bg-white focus:ring-2 focus:outline-none focus:ring-teal-500 font-medium rounded-lg text-sm px-5 py-1 ml-2 text-center inline-flex items-center"
 						type="text"
 						id="title"
 						value={selectedTitle}

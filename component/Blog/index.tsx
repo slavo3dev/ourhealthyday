@@ -3,10 +3,10 @@ import { FC } from "react";
 export const BlogWelcome: FC = () => {
 	return (
 		<>
-			<div className="flex flex-col bg-white justify-center items-center h-full p-8">
+			<div className="flex flex-col w-full bg-f2eee5 justify-center items-center h-full p-8">
 				<section className="py-20">
 					<div>
-						<div className="w-full">
+						<div>
 							<div>
 								<h2 className="mb-4 text-3xl font-bold font-heading text-center">
                     Welcome to our Blog!

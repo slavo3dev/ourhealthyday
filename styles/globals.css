@@ -11,7 +11,7 @@
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 15px;
+  width: 0px;
 }
 
 *::-webkit-scrollbar-track {
@@ -26,7 +26,7 @@
 }
 
 body {
-  background:  white;
+  background: #f2eee5;
   font-family: "Sono", sans-serif;
 }
 
@@ -48,16 +48,16 @@ body {
   font-family: "Cabin", Sans-serif;
   background: linear-gradient(
     to bottom,
-    #115e59,
-    #115e59 20%,
-    #bbf7d0 20%,
-    #bbf7d0 40%,
-    #115e59 40%,
-    #115e59 60%,
-    #bbf7d0 60%,
-    #bbf7d0 80%,
-    #115e59 80%,
-    #115e59 100%
+    #000000,
+    #000000 20%,
+    #ffffff 20%,
+    #ffffff 40%,
+    #000000 40%,
+    #000000 60%,
+    #ffffff 60%,
+    #ffffff 80%,
+    #000000 80%,
+    #000000 100%
   );
 }
 
@@ -68,14 +68,13 @@ body {
   left: -250px;
   width: 400px;
   height: 100%;
-  background-color: #bbf7d0;
+  background-color: white;
   transition: 0.3s;
-  padding: 0px 10px;
   box-sizing: border-box;
 }
 
 .hamburger-menu h3 {
-  color: #115e59;
+  color: black;
   font-size: 2.2rem;
 }
 
@@ -89,7 +88,7 @@ body {
 }
 
 .hamburger-menu .nav-links {
-  color: #115e59;
+  color: black;
   font-size: 1.3rem;
   text-decoration: none;
 }

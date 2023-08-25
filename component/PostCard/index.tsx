@@ -127,7 +127,7 @@ export const BlogPostCard: FC = () => {
 									<p>{post.excerpt}</p>
 									<div className="flex space-x-4 pt-4">
 										<Link href="https://www.slavo.io/">
-											<p className="hover:font-mono">
+											<p className="underline hover:font-mono">
                             Author: {post.author.name}
 											</p>
 										</Link>
@@ -138,7 +138,7 @@ export const BlogPostCard: FC = () => {
 											).toLocaleDateString()}
 										</p>
 										<div>
-											<p className="bg-green-400 px-4 italic rounded-full">
+											<p className="bg-blue-400 px-4 italic rounded-full">
                             Category:{" "}
 												{post.categories.map(
 													(category, index) => (
