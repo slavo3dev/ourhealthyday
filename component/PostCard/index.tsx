@@ -95,11 +95,11 @@ export const BlogPostCard: FC = () => {
 			<CategorySelection
 				onSearchButtonClick={handleSearchButtonClick}
 			/>
-			<div className="pt-12 bg-white border-2 border-teal-500 pl-16 rounded-lg drop-shadow-2xl postcard-div">
+			<div className="pt-12 bg-white border-2 border-teal-500 pl-16 rounded-lg drop-shadow-2xl postcard-outer-div">
 				{filteredPosts.map((post) => (
 					<div
 						key={post.id}
-						className={`mb-4 grid grid-rows-1 grid-flow-col gap-4 ${
+						className={`mb-4 grid grid-rows-1 grid-flow-col gap-4 postcard-inner-div ${
 							isSearching ? "hidden" : "animate-fade-in"
 						}`}
 					>

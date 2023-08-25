@@ -12,7 +12,7 @@ export const NavBar: FC = () => {
 
 	return (
 		<>
-			<nav className="w-full px-6 py-3 bg-white border-2 border-white border-b-teal-500 ... ">
+			<nav className="w-full px-6 py-3 bg-white border-2 border-white border-b-teal-500 ...">
 				<div className="flex items-center justify-between text-blue-gray-900">
 					<div className="mr-4 cursor-pointer py-1.5 text-black text-5xl">
 						<Link href="/">Our Healthy Day</Link>
