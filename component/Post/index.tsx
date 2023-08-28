@@ -19,7 +19,7 @@ export const BlogContent: FC = () => {
 				console.error("Error fetching blog posts:", error);
 			});
 		console.log("BlogContent");
-	}, []);
+	}, [blogPosts]);
 
 	return (
 		<>
@@ -43,9 +43,8 @@ export const BlogContent: FC = () => {
             Updated At:{" "}
 							{new Date(post.updatedAt).toLocaleDateString()}
 						</p>
-
 						<div className="max-w-xs">
-							<p className="bg-green-400 px-4 italic rounded-full">
+							<p className="bg-blue-400 px-4 italic rounded-full">
                         Category:{" "}
 								{post.categories.map((category, index) => (
 									<span key={category.slug}>
@@ -55,7 +54,6 @@ export const BlogContent: FC = () => {
 								))}
 							</p>
 						</div>
-              
 						{/* HTML content */}
 						<div>
 							<div className="text-lg pt-12"

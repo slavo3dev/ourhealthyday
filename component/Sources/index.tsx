@@ -17,7 +17,6 @@ export const FunctionFactList: FC = () => {
 		function () {
 			async function getSources() {
 				setIsLoading(true);
-
 				let query = supabase.from("facts").select("*");
 
 				if (currentCategory !== "all")
@@ -30,15 +29,11 @@ export const FunctionFactList: FC = () => {
 				if (!error) setFacts(facts);
 				else alert("There was a problem getting data, please try again");
 				setIsLoading(false);
-			}
-			getSources();
-		},
-		[currentCategory, showForm],
+			} getSources();
+		}, [currentCategory, showForm],
 	);
 
-	const handleOnClose = () => {
-		setShowForm(true);
-	};
+	const handleOnClose = () => {setShowForm(true);};
 
 	return (
 		<section className="mx-auto container">
@@ -47,12 +42,8 @@ export const FunctionFactList: FC = () => {
 					<h3 className="mr-4 cursor-pointer py-1.3 text-black text-3xl sources-heading">
             Share: Supplements, Books, Podcasts, Apps, Post or any Sources & Fact
 					</h3>
-					<button
-						className="hover:font-bold bg-white text-black border-2 border-teal-500 py-2 px-4 rounded-lg w-auto add-button"
-						onClick={handleOnClose}
-					>
-            Share Source
-					</button>
+					<button className="hover:font-bold bg-white text-black border-2 border-teal-500 py-2 px-4 rounded-lg w-auto add-button" onClick={handleOnClose}>
+					Share Source</button>
 				</div>
 			</div>
 			<main>

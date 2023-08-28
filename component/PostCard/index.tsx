@@ -25,7 +25,7 @@ export const BlogPostCard: FC = () => {
 				console.error("Error fetching blog posts:", error);
 			});
 		console.log("BlogPost");
-	}, []);
+	}, [blogPosts]);
 
 	const handleSearchButtonClick = (
 		category: string,
@@ -39,50 +39,27 @@ export const BlogPostCard: FC = () => {
 	};
 
 	const filteredPosts = blogPosts.filter((post) => {
-		if (
-			(selectedCategory === "" || selectedCategory === "All Categories") &&
-			(selectedAuthor === "" || selectedAuthor === "All Authors")
-		) {
-			return post.title.toLowerCase().includes(searchTerm.toLowerCase()); // Check if the post title includes the searchTerm
-		}
-		
-		if (
-			(selectedCategory === "" ||
-        selectedCategory === "All Categories") &&
-      (selectedAuthor === "" || selectedAuthor === "All Authors")
-		) {
-			// Show all posts when both options are set to "All"
-			return true;
+		const isMatchSearchTerm = post.title.toLowerCase().includes(searchTerm.toLowerCase());
+	  
+		if (selectedCategory === "All Categories" && selectedAuthor === "All Authors") {
+			return isMatchSearchTerm;
 		}
 
-		if (
-			(selectedCategory === "" ||
-        selectedCategory === "All Categories") &&
-      post.author.name === selectedAuthor
-		) {
-			// Show posts by the selected author when category is "All Categories"
+		if (selectedCategory === "All Categories" && post.author.name === selectedAuthor) {
 			return true;
 		}
-
-		if (
-			(selectedAuthor === "" || selectedAuthor === "All Authors") &&
-      post.categories.some((cat) => cat.name === selectedCategory)
-		) {
-			// Show posts in the selected category when author is "All Authors"
+  
+		if (selectedAuthor === "All Authors" && post.categories.some(cat => cat.name === selectedCategory)) {
 			return true;
 		}
-
-		if (
-			post.categories.some((cat) => cat.name === selectedCategory) &&
-      post.author.name === selectedAuthor
-		) {
-			// Show posts that match both selected category and author
+  
+		if (post.categories.some(cat => cat.name === selectedCategory) && post.author.name === selectedAuthor) {
 			return true;
 		}
-
-		return false;
+  
+		return isMatchSearchTerm;
 	});
-
+	
 	useEffect(() => {
 		setIsSearching(false);
 	}, [filteredPosts]);
