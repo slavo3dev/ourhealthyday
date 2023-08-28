@@ -3,6 +3,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["png.pngtree.com"],
+    domains: ["png.pngtree.com", "cdn.outsideonline.com"],
   },
 };
