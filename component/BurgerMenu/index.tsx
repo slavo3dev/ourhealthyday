@@ -19,29 +19,29 @@ export const HamburgerMenu: FC<HamburgerMenuProps> = ({ isOpen, handleToggleMenu
 			/>
 			<label className="hamburger-menu" htmlFor="hamburger-input">
 				<nav className="sidebar-menu">
-					<h3>Menu</h3>
+					<h3 className="border-2 border-white border-b-teal-500 pl-6">Menu</h3>
 					<ul>
-						<li>
+						<li className="pl-6">
 							<Link className="nav-links" href="/">
                 Home
 							</Link>
 						</li>
-						<li>
+						<li className="pl-6">
 							<Link className="nav-links" href="/blog">
                 Blog
 							</Link>
 						</li>
-						<li>
+						<li className="pl-6">
 							<Link className="nav-links" href="/store">
                 Store
 							</Link>
 						</li>
-						<li>
+						<li className="pl-6">
 							<Link className="nav-links" href="/contact">
                 Contact
 							</Link>
 						</li>
-						<li>
+						<li className="pl-6">
 							<Link className="nav-links" href="/login">
                 Login
 							</Link>

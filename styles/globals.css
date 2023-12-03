@@ -3,10 +3,31 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
 
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+
 body {
-  background: white;
+  background: #f2eee5;
   font-family: "Sono", sans-serif;
-  padding: 3.33% 4.44% 0%;
 }
 
 .hamburger-input {
@@ -27,16 +48,16 @@ body {
   font-family: "Cabin", Sans-serif;
   background: linear-gradient(
     to bottom,
-    #115e59,
-    #115e59 20%,
-    #bbf7d0 20%,
-    #bbf7d0 40%,
-    #115e59 40%,
-    #115e59 60%,
-    #bbf7d0 60%,
-    #bbf7d0 80%,
-    #115e59 80%,
-    #115e59 100%
+    #000000,
+    #000000 20%,
+    #ffffff 20%,
+    #ffffff 40%,
+    #000000 40%,
+    #000000 60%,
+    #ffffff 60%,
+    #ffffff 80%,
+    #000000 80%,
+    #000000 100%
   );
 }
 
@@ -47,14 +68,13 @@ body {
   left: -250px;
   width: 400px;
   height: 100%;
-  background-color: #bbf7d0;
+  background-color: white;
   transition: 0.3s;
-  padding: 0px 10px;
   box-sizing: border-box;
 }
 
 .hamburger-menu h3 {
-  color: #115e59;
+  color: black;
   font-size: 2.2rem;
 }
 
@@ -68,7 +88,7 @@ body {
 }
 
 .hamburger-menu .nav-links {
-  color: #115e59;
+  color: black;
   font-size: 1.3rem;
   text-decoration: none;
 }
@@ -85,15 +105,28 @@ body {
 .cat-buttons {
   overflow: scroll;
 }
+ /*next two lines are animation for postCardSearch*/
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
 
-/* Tablet 481px - 768px */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tablet 425px - 768px */
+@media screen and (min-width: 425px) and (max-width: 768px) {
   .hamburger-menu {
     display: inline;
-    top: 8%;
-    right: 8%;
+    top: 5%;
+    right: 3%;
     height: 3%;
-    width: 3%;
+    width: 5%;
   }
 
   .cat-buttons {
@@ -112,6 +145,25 @@ body {
     align-content: center;
   }
 
+  .postcard-section {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  
+  .postcard-inner-div {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0%;
+  }
+
+  .postcard-outer-div {
+    padding: 10% 2% 1% 2%;
+    margin-left: 0%;
+  }
+
   .store div h1 {
     margin-top: 4rem;
   }
@@ -121,9 +173,7 @@ body {
     justify-content: space-between;
     margin-right: 1rem;
   }
-  .store-items div h4 {
-    margin-left: 1rem;
-  }
+
   .arrow-block .store-arrow {
     margin-top: 3.5rem;
   }
@@ -154,19 +204,36 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-}
+  .selection-cat-form {
+    display: grid;
+  grid-auto-rows: auto;
+  }
 
-/* Phone 320px - 480px */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+  .search-cat-section {
+    margin-bottom: 60%;
+  }
+
+  .search-cat-button {
+    margin-top: 10%;
+  }
+
+  .search-select {
+    margin-top: 5%;
+  }
+} 
+
+/* Phone 320px - 424px */
+@media screen and (min-width: 320px) and (max-width: 424px) {
 
   body {
-    padding: 12% 1% 0%;
+    padding: 0%;
   }
 
   .hamburger-menu {
     display: inline;
     top: 10.5%;
     right: 8%;
+    width: 10%;
   }
 
   .cat-buttons {
@@ -201,8 +268,16 @@ body {
   }
 
   .sources-heading {
-    font-size: 0.8rem;
-    line-height: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .store-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 1rem;
   }
 
   .postcard-section {
@@ -210,12 +285,18 @@ body {
     padding-right: 0%;
   }
   
-  .postcard-div {
+  .postcard-inner-div {
     display: flex;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     padding-left: 0%;
+  }
+
+  .postcard-outer-div {
+    padding: 10% 2% 1% 2%;
+    margin-left: 5%;
   }
 
   .postcard-div li {
@@ -231,5 +312,22 @@ body {
     margin: 0;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  
+  .selection-cat-form {
+    display: grid;
+  grid-auto-rows: auto;
+  }
+
+  .search-cat-section {
+    margin-bottom: 60%;
+  }
+
+  .search-cat-button {
+    margin-top: 10%;
+  }
+
+  .search-select {
+    margin-top: 5%;
   }
 }
