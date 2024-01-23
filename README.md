@@ -5,6 +5,6 @@ Btn Colors: #6b8f71
 
 Source/Font: #1d1e18
 
-2nd Color: #d9fff5
+2nd Color:
 
 
